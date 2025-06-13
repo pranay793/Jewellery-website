@@ -1,0 +1,88 @@
+/* src/components/Header.css */
+.header {
+    padding: 20px 0;
+    position: relative;
+  }
+  
+  .logo img {
+    width: 50%;
+  }
+  
+  /* Hide menu icon on desktop */
+  .menu-icon {
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
+  }
+  
+  /* Desktop nav */
+  .nav-links {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+  }
+  
+  .nav-links a {
+    color: #000;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 16px;
+    padding-right: 50px;
+  }
+  .nav-links a:last-child {
+   padding-right: 0;
+  }
+  
+  .nav-links a:hover {
+    text-decoration: underline;
+  }
+  
+  .header-icons {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: flex-end;
+  }
+  
+  .search-box {
+    padding: 5px;
+  }
+  
+  /* ===== Responsive Styles ===== */
+  @media (max-width: 768px) {
+    .menu-icon {
+      display: block;
+    }
+  
+    .nav-links {
+      display: none;
+      flex-direction: column;
+      width: 100%;
+      background-color: #111827;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      padding: 10px 20px;
+      z-index: 10;
+    }
+  
+    .nav-links.open {
+      display: flex;
+    }
+  
+    .header-icons {
+      width: 100%;
+      justify-content: flex-end;
+      margin-top: 10px;
+    }
+  
+    .search-box {
+      width: 100%;
+      margin-right: 10px;
+    }
+  
+    .header {
+      align-items: flex-start;
+    }
+  }
+  
