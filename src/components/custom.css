@@ -789,3 +789,56 @@ footer p a{
 .quantity-input{
   border:none!important;
 }
+
+/* ThankYouPage.css */
+.thank-container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to bottom right, #ffe4e6, #fef9c3);
+  padding: 1rem;
+}
+
+.thank-box {
+  background: white;
+  padding: 2rem;
+  border-radius: 1.5rem;
+  text-align: center;
+  max-width: 400px;
+  width: 100%;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.thank-box img {
+  width: 80px;
+  margin-bottom: 1rem;
+}
+
+.thank-box h1 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  color: #1f2937;
+}
+
+.thank-box p {
+  color: #4b5563;
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+}
+
+.thank-button {
+  background-color: #ec4899;
+  color: white;
+  padding: 0.6rem 1.5rem;
+  border: none;
+  border-radius: 999px;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+}
+
+.thank-button:hover {
+  background-color: #db2777;
+}
