@@ -9,6 +9,7 @@ import Shop from './components/Shop';
 import ProductDetails from './components/ProductDetails';
 import CartPage from './components/CartPage';
 import CheckoutPage from './components/CheckoutPage';
+import ThankYouPage from './components/ThankYouPage';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
           <Route path="/ProductDetails/:id" element={<ProductDetails />} />
           <Route path="/cart" element={<CartPage />} />
           <Route path="/checkout" element={<CheckoutPage />} />
+          <Route path="/thank-you" element={<ThankYouPage />} />
         </Routes>
         <Footersec />
       </div>
