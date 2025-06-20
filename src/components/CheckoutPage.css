@@ -45,17 +45,16 @@
   }
   
   .place-order {
-    width: 100%;
-    padding: 14px;
+    padding: 10px 40px;
     background: #222;
     color: white;
     border: none;
     border-radius: 5px;
     font-weight: bold;
-    cursor: pointer;
-    margin-top: 20px;
   }
-  
+  .place-order:hover {
+    background: #FCCA01!important;
+  }
   .order-summary {
     flex: 0.4;
     background: #F3F3F3;
@@ -140,6 +139,7 @@
     background-color: #f9f9f9;
     padding: 20px;
     border-radius: 8px;
+    height: 100%;
   }
   
   .summary-product {
@@ -188,4 +188,13 @@
   }
   .summary-image{
     background: #fff;
+    height: 100%;
+    border: 1px solid #dbdbdd;
+  }
+  .checkout-form .btn {
+    min-width: 140px;
+  }
+  label.required::after {
+    content: " *";
+    color: red;
   }

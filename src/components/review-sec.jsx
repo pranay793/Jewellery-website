@@ -15,7 +15,7 @@ const Reviewsec = () => {
              <div className='col-6 rive-img'>
              <img src="images/review1.jpg" alt=""/>
              </div>
-             <div className='col-6 review-box'>
+             <div className='col-6 review-box border-top2'>
                <img src="images/quote.png" alt="" className='mb-3 w-45'/>
                 <p>“The quality of the clothes exceeded my expectations. Every piece feels premium, and the designs are
                 so trendy. I'm obsessed with my new wardrobe additions!” </p>
@@ -29,7 +29,7 @@ const Reviewsec = () => {
              <div className='col-6 rive-img'>
              <img src="images/review2.jpg" alt=""/>
              </div>
-             <div className='col-6 review-box'>
+             <div className='col-6 review-box border-top2'>
                <img src="images/quote.png" alt="" className='mb-3 w-45'/>
                 <p>“This jewelry shop is my go-to! The designs are elegant, you get. I recently got a pair of silver earrings, 
                     and they are just perfect. Amazing service too!” </p>

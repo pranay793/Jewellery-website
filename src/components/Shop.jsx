@@ -1,90 +1,72 @@
-import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import React, { useState, useEffect, useContext } from "react";
+import { useNavigate } from "react-router-dom";
+import { CartContext } from "../context/CartContext";
 import Bestselling from './Bestselling';
 import Trendsec from './TrendSec';
 
-const products = [
-  {
-    id: 1,
-    name: "Bracelets",
-    image: "/images/product1.png",
-    price: 48.99,
-    describ: "Machine Design, 24 Carat"
-  },
-  {
-    id: 2,
-    name: "Rings",
-    image: "/images/product2.png",
-    price: 39.29,
-    describ: "Machine Design, 24 Carat"
-  },
-  {
-    id: 3,
-    name: "Earrings",
-    image: "/images/product3.png",
-    price: 15.77,
-    describ: "Machine Design, 24 Carat"
-  },
-  {
-    id: 4,
-    name: "Earrings",
-    image: "/images/product4.png",
-    price: 22.00,
-    describ: "Machine Design, 24 Carat"
-  },
-  {
-    id: 5,
-    name: "Rings",
-    image: "/images/product5.png",
-    price: 33.99,
-    describ: "White Gold, 24 Carat"
-  },
-  {
-    id: 6,
-    name: "Rings",
-    image: "/images/product6.png",
-    price: 16.00,
-    describ: "Machine Design, 24 Carat"
-  },
-  {
-    id: 7,
-    name: "Rings",
-    image: "/images/product7.png",
-    price: 11.32,
-    describ: "Gold, 24 Carat"
-  },
-  {
-    id: 8,
-    name: "Pendant",
-    image: "/images/product8.png",
-    price: 33.00,
-    describ: "Machine Design, 24 Carat"
-  },
-  {
-    id: 9,
-    name: "Rings",
-    image: "/images/product9.png",
-    price: 16.00,
-    describ: "White Gold, 24 Carat"
-  },
-];
-
 const Shop = () => {
   const navigate = useNavigate();
-  const [searchTerm, setSearchTerm] = useState('');
-  const [minPrice, setMinPrice] = useState(10);
-  const [maxPrice, setMaxPrice] = useState(50);
+  const { cartItems, setCartItems } = useContext(CartContext);
 
-  const handleProductClick = (id) => {
-    navigate(`/ProductDetails/${id}`);
+  const [searchTerm, setSearchTerm] = useState('');
+  const [maxPrice, setMaxPrice] = useState(100);
+  const [wishlist, setWishlist] = useState([]);
+  const [productsData, setProducts] = useState([]);
+  const [popupMessage, setPopupMessage] = useState('');
+
+  useEffect(() => {
+    const stored = JSON.parse(localStorage.getItem("wishlist")) || [];
+    setWishlist(stored);
+  }, []);
+
+  useEffect(() => {
+    fetch('http://localhost:3001/products')
+      .then(res => res.json())
+      .then(data => {
+        console.log("Fetched products:", data);
+        setProducts(data);
+      });
+  }, []);
+
+  const handleProductClick = (product) => {
+    navigate(`/ProductDetails/${product.id}`, { state: { product } });
   };
 
-  const filteredProducts = products.filter(
+  const filteredProducts = productsData.filter(
     (product) =>
-      product.price >= minPrice &&
       product.price <= maxPrice &&
       product.name.toLowerCase().includes(searchTerm.toLowerCase())
   );
+
+  const handleWishlistClick = (e, product) => {
+    e.stopPropagation();
+    const isAlreadyAdded = wishlist.find(item => item.id === product.id);
+
+    if (!isAlreadyAdded) {
+      const updated = [...wishlist, product];
+      localStorage.setItem("wishlist", JSON.stringify(updated));
+      setWishlist(updated);
+    } else {
+      setPopupMessage("This product is already in your wishlist!");
+    }
+
+    setTimeout(() => setPopupMessage(''), 2000);
+  };
+
+  const handleAddToCart = (e, product) => {
+    e.stopPropagation();
+    const isAlreadyInCart = cartItems.find(item => item.id === product.id);
+
+    if (isAlreadyInCart) {
+      setPopupMessage("This product is already in your cart!");
+    } else {
+      const updated = [...cartItems, { ...product, quantity: 1 }];
+      setCartItems(updated);
+      localStorage.setItem("cart", JSON.stringify(updated));
+    }
+
+    setTimeout(() => setPopupMessage(''), 2000);
+  };
 
   return (
     <>
@@ -105,69 +87,32 @@ const Shop = () => {
 
             {/* FILTER COLUMN */}
             <div className='col-md-3'>
-              <div className='filter-box'>
-                <h3>PRICE</h3>
-                <div className="price-filter">
-                  <div className="range-slider">
-                    <input
-                      type="range"
-                      min="0"
-                      max="100"
-                      step="1"
-                      value={minPrice}
-                      onChange={(e) => {
-                        const value = Math.min(Number(e.target.value), maxPrice - 1);
-                        setMinPrice(value);
-                      }}
-                    />
-                    <input
-                      type="range"
-                      min="0"
-                      max="100"
-                      step="1"
-                      value={maxPrice}
-                      onChange={(e) => {
-                        const value = Math.max(Number(e.target.value), minPrice + 1);
-                        setMaxPrice(value);
-                      }}
-                    />
-                  </div>
-                  <div className="price-values">
-                    <span>${minPrice}</span>
-                    <span>${maxPrice}</span>
-                  </div>
+            <div className='filter-box'>
+              <h3>PRICE</h3>
+              <div className="price-filter">
+                <div className="range-slider">
+                  <input
+                    type="range"
+                    min="0"
+                    max="100"
+                    step="1"
+                    value={maxPrice}
+                    onChange={(e) => setMaxPrice(Number(e.target.value))}
+                  />
                 </div>
-              </div>
-              <div className='filter-box'>
-                <h3>Brand</h3>
-                <ul>
-                  <li><a href='#'>Brand 1(15)</a></li>
-                  <li><a href='#'>Brand 2(16)</a></li>
-                  <li><a href='#'>Brand 3(17)</a></li>
-                  <li><a href='#'>Brand 4(18)</a></li>
-                </ul>
-              </div>
-              <div className='filter-box'>
-                <h3>Size</h3>
-                <ul>
-                  <li><a href='#'>Size 1(15)</a></li>
-                  <li><a href='#'>Size 2(16)</a></li>
-                  <li><a href='#'>Size 3(17)</a></li>
-                  <li><a href='#'>Size 4(18)</a></li>
-                </ul>
-              </div>
-              <div className='filter-box'>
-                <h3>Weight</h3>
-                <ul>
-                  <li><a href='#'>Weight 1(15)</a></li>
-                  <li><a href='#'>Weight 2(16)</a></li>
-                  <li><a href='#'>Weight 3(17)</a></li>
-                  <li><a href='#'>Weight 4(18)</a></li>
-                </ul>
+                <div className="price-values">
+                  <span>Up to ${maxPrice}</span>
+                </div>
               </div>
             </div>
 
-            {/* PRODUCTS COLUMN */}
+              {/* Dummy Brand, Size, Weight Sections */}
+              <div className='filter-box'><h3>Brand</h3><ul><li><a href='#'>Brand 1(15)</a></li></ul></div>
+              <div className='filter-box'><h3>Size</h3><ul><li><a href='#'>Size 1(15)</a></li></ul></div>
+              <div className='filter-box'><h3>Weight</h3><ul><li><a href='#'>Weight 1(15)</a></li></ul></div>
+            </div>
+
+            {/* PRODUCT COLUMN */}
             <div className='col-md-9'>
               <div className='sort-by'>
                 <p>Sort By</p>
@@ -181,23 +126,34 @@ const Shop = () => {
                   <i className="fas fa-search search-icon"></i>
                 </div>
               </div>
+
               <div className='row'>
                 {filteredProducts.map((product) => (
-                  <div className='col-md-4 mb-5' key={product.id}>
+                  <div className='col-md-4 mb-5' key={product.id} onClick={() => handleProductClick(product)}>
                     <div style={{ cursor: "pointer" }} onClick={() => handleProductClick(product.id)}>
                       <div className="img-box w-100">
                         <img
                           src={product.image}
                           alt={product.name}
-                          style={{ width: "100%", height: "auto", borderRadius: "8px" }}
+                          style={{ width: "100%", borderRadius: "8px" }}
                         />
                         <div className="icon-container">
-                          <div className="icon"><i className="fas fa-heart"></i></div>
-                          <div className="icon"><i className="fas fa-shopping-cart"></i></div>
+                          <div
+                            className={`icon ${wishlist.some(item => item.id === product.id) ? 'active' : ''}`}
+                            onClick={(e) => handleWishlistClick(e, product)}
+                          >
+                            <i className="fas fa-heart"></i>
+                          </div>
+                          <div
+                            className={`icon ${cartItems.some(item => item.id === product.id) ? 'active' : ''}`}
+                            onClick={(e) => handleAddToCart(e, product)}
+                          >
+                            <i className="fas fa-shopping-cart"></i>
+                          </div>
                         </div>
                       </div>
                       <div className="price-box">
-                        <h4 style={{ marginTop: "10px" }}>{product.name}</h4>
+                        <h4>{product.name}</h4>
                         <p className="describ-text">{product.describ}</p>
                         <p className="price-text">${product.price.toFixed(2)}/10MG</p>
                         <ul className="star-ratting">
@@ -220,6 +176,10 @@ const Shop = () => {
 
       <Bestselling />
       <Trendsec />
+
+      {popupMessage && (
+        <div className="popup-message">{popupMessage}</div>
+      )}
     </>
   );
 };

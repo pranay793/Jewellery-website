@@ -1,61 +1,49 @@
-import React from "react";
+import { useContext } from 'react';
+import { CartContext } from '../context/CartContext';
+import React, { useState, useEffect } from "react";
 import { useNavigate } from 'react-router-dom';
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import './custom.css';
 
-const products = [
-  {
-    id: 1,
-    name: "Bracelets",
-    image: "/images/product1.png",
-    price: "$29.99/10MG",
-    describ: "Machine Design, 24 Carat"
-  },
-  {
-    id: 2,
-    name: "Rings",
-    image: "/images/product2.png",
-    price: "$22.29/10MG",
-    describ: "Machine Design, 24 Carat"
-  },
-  {
-    id: 3,
-    name: "Earrings",
-    image: "/images/product3.png",
-    price: "$15.77/10MG",
-    describ: "Machine Design, 24 Carat"
-  },
-  {
-    id: 4,
-    name: "Earrings",
-    image: "/images/product4.png",
-    price: "$22.00/10MG",
-    describ: "Machine Design, 24 Carat"
-  },
-  {
-    id: 5,
-    name: "Bracelets",
-    image: "/images/product1.png",
-    price: "$29.99/10MG",
-    describ: "Machine Design, 24 Carat"
-  },
-  {
-    id: 6,
-    name: "Rings",
-    image: "/images/product2.png",
-    price: "$22.29/10MG",
-    describ: "Machine Design, 24 Carat"
-  },
-];
+
 
 const FourProductCarousel = () => {
-  const navigate = useNavigate();
+  const { cartItems, setCartItems } = useContext(CartContext);
+  const [productsData, setProducts] = useState([]);
 
-  const handleProductClick = (id) => {
-    navigate(`/ProductDetails/${id}`);
+  const handleAddToCart = (product) => {
+    const existing = cartItems.find(item => item.id === product.id);
+    let updatedCart;
+  
+    if (existing) {
+      setPopupMessage("This product is already in your cart!");
+      setTimeout(() => setPopupMessage(''), 2000);
+      return; // Stop here, don’t add again
+    } else {
+      updatedCart = [...cartItems, { ...product, quantity: 1 }];
+      setCartItems(updatedCart);
+      localStorage.setItem("cart", JSON.stringify(updatedCart));
+    }
   };
+
+
+  const navigate = useNavigate();
+  const [wishlist, setWishlist] = useState([]);
+  const [popupMessage, setPopupMessage] = useState('');
+
+ 
+
+  useEffect(() => {
+    const stored = JSON.parse(localStorage.getItem("wishlist")) || [];
+    setWishlist(stored);
+  }, []);
+
+
+  const handleProductClick = (product) => {
+    navigate(`/ProductDetails/${product.id}`, { state: { product } });
+  };  
 
   const settings = {
     dots: false,
@@ -71,7 +59,39 @@ const FourProductCarousel = () => {
     ],
   };
 
+  const handleWishlistClick = (e, product) => {
+    e.stopPropagation();
+    const stored = JSON.parse(localStorage.getItem("wishlist")) || [];
+    const isAlreadyAdded = stored.find(item => item.id === product.id);
+  
+    if (!isAlreadyAdded) {
+      const updated = [...stored, product];
+      localStorage.setItem("wishlist", JSON.stringify(updated));
+      setWishlist(updated);
+    } else {
+      setPopupMessage("This product is already in your wishlist!");
+      setTimeout(() => {
+        setPopupMessage('');
+      }, 2000);
+    }
+  };
+
+  useEffect(() => {
+    fetch('http://localhost:3001/products')
+      .then(res => res.json())
+      .then(data => {
+        console.log("Fetched products:", data);
+        setProducts(data);
+      });
+  }, []);
+  
+  
+  
+  
+  
+
   return (
+    <>
     <div className="trending-slider">
       <div className="container">
         <div className="heading-con">
@@ -80,11 +100,11 @@ const FourProductCarousel = () => {
           <img src="/images/Line 2.png" alt="line" />
         </div>
         <Slider {...settings}>
-          {products.map((product) => (
+        {productsData.map((product) => (
             <div
               key={product.id}
               style={{ padding: "10px", margin: "0 20px", cursor: "pointer" }}
-              onClick={() => handleProductClick(product.id)}
+              onClick={() => handleProductClick(product)}
             >
               <div className="img-box">
                 <img
@@ -93,14 +113,27 @@ const FourProductCarousel = () => {
                   style={{ width: "100%", height: "auto", borderRadius: "8px" }}
                 />
                 <div className="icon-container">
-                  <div className="icon"><i className="fas fa-heart"></i></div>
-                  <div className="icon"><i className="fas fa-shopping-cart"></i></div>
+                <div
+                className={`icon ${wishlist.some(item => item.id === product.id) ? 'active' : ''}`}
+                onClick={(e) => handleWishlistClick(e, product)}
+              >
+                <i className="fas fa-heart"></i>
+              </div>
+              <div
+                className={`icon ${cartItems.some(item => item.id === product.id) ? 'active' : ''}`}
+                onClick={(e) => {
+                  e.stopPropagation();
+                  handleAddToCart(product);
+                }}
+              >
+                <i className="fas fa-shopping-cart"></i>
+              </div>
                 </div>
               </div>
               <div className="price-box">
                 <h4 style={{ marginTop: "10px" }}>{product.name}</h4>
                 <p className="describ-text">{product.describ}</p>
-                <p className="price-text">{product.price}</p>
+                <p className="price-text">${product.price}</p>
                 <ul className="star-ratting">
                   <li><i className="fa-solid fa-star"></i></li>
                   <li><i className="fa-solid fa-star"></i></li>
@@ -113,7 +146,13 @@ const FourProductCarousel = () => {
           ))}
         </Slider>
       </div>
+      {popupMessage && (
+        <div className="popup-message">
+          {popupMessage}
+        </div>
+      )}
     </div>
+    </>
   );
 };
 

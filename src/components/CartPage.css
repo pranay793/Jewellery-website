@@ -170,16 +170,7 @@
     height: 25px;
   }
   
-  .remove-btn {
-    background: none;
-    border: none;
-    font-size: 38px;
-    color: #d9534f;
-    cursor: pointer;
-    position: absolute;
-    right: 37px;
-    top: 32px;
-  }
+ 
   
   .cart-summary {
     flex: 1;
@@ -273,4 +264,76 @@
     font-weight: bold;
     cursor: pointer;
   }
- 
+  .card-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+  }
+  
+  .card-text {
+    font-size: 0.95rem;
+    color: #555;
+  }
+  
+  .btn {
+    border-radius: 6px;
+  }
+  /* Only bottom borders for cart table */
+.table.cart-table {
+  border-collapse: collapse;
+}
+
+.table.cart-table thead th {
+  border-bottom: 2px solid #dee2e6;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  background-color: #f8f9fa;
+  font-weight: 600;
+}
+
+.table.cart-table tbody td {
+  border-bottom: 1px solid #dee2e6;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  vertical-align: middle;
+}
+
+/* Order Summary Card */
+.cart-summary-card {
+  border: 1px solid #dee2e6;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  padding: 24px;
+  background-color: #fff;
+}
+
+.cart-summary-card h4 {
+  margin-bottom: 20px;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 8px;
+}
+
+.cart-summary-card p {
+  margin: 10px 0;
+  font-size: 16px;
+}
+.process-btn{
+  background: #000;
+  border:none;
+  border-radius: 0;
+}
+.process-btn:hover{
+ background: #FCCA01;
+ color: #000;
+}
+.shopping-btn{
+  background: #fff;
+  border:1px solid #000;
+  color: #000;
+  border-radius: 0;
+}
+.shopping-btn:hover{
+  background: #000;
+  border:1px solid #000;
+}

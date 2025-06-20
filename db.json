@@ -1,0 +1,211 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Chain Bracelet",
+      "image": "/images/product1.png",
+      "price": 96.99,
+      "describ": "Machine Design, 24 Carat",
+      "describ1": "Product Code: Product 16",
+      "quantity": 1, 
+      "Vendor":"Chain Bracelet",
+      "imageArray": [
+          { "id": 1, "url": "/images/product1.png" },
+          { "id": 2, "url": "/images/product1-1.png" },
+          { "id": 3, "url": "/images/product1-2.png" },
+          { "id": 4, "url": "/images/product1-3.png" }
+        ],
+        "handle":"Chain Bracelet"
+     
+    },
+    {
+      "id": 2,
+      "name": "Gold Rings",
+      "image": "/images/product2.png",
+      "price": 85.29,
+      "describ": "Hand Design, 24 Carat",
+      "describ1": "Product Code: Product 16",
+      "quantity": 1, 
+      "Vendor":"Gold Rings",
+      "imageArray": [
+          { "id": 1, "url": "/images/product2.png" },
+          { "id": 2, "url": "/images/product2-1.png" },
+          { "id": 3, "url": "/images/product2-2.png" },
+          { "id": 4, "url": "/images/product2-3.png" }
+        ],
+        "handle":"GoldRings"
+    },
+    {
+      "id": 3,
+      "name": "Gemstone Earrings",
+      "image": "/images/product3.png",
+      "price": 76.77,
+      "describ": "Machine Design, 24 Carat",
+      "describ1": "Product Code: Product 16",
+      "quantity": 1, 
+      "Vendor":"Gemstone Earrings",
+      "imageArray": [
+          { "id": 1, "url": "/images/product3.png" },
+          { "id": 2, "url": "/images/product3-1.png" },
+          { "id": 3, "url": "/images/product3-2.png" },
+          { "id": 4, "url": "/images/product3-3.png" }
+        ],
+        "handle":"GemstoneEarrings"
+    },
+    {
+      "id": 4,
+      "name": "Royal Earrings",
+      "image": "/images/product4.png",
+      "price": 67.11,
+      "describ": "Hand Wash, 22 Carat",
+      "describ1": "Product Code: Product 16",
+      "quantity": 1, 
+      "Vendor":"Royal Earrings",
+      "imageArray": [
+          { "id": 1, "url": "/images/product4.png" },
+          { "id": 2, "url": "/images/product4-1.png" },
+          { "id": 3, "url": "/images/product4-2.png" },
+          { "id": 4, "url": "/images/product4-3.png" }
+        ],
+        "handle":"RoyalEarrings"
+    },
+    {
+      "id": 5,
+      "name": "Solitaire Ring",
+      "image": "/images/product5.png",
+      "price": 54.99,
+      "describ": "Machine Design, 24 Carat",
+      "describ1": "Product Code: Product 16",
+      "quantity": 1, 
+      "Vendor":"Solitaire Ring",
+      "imageArray": [
+          { "id": 1, "url": "/images/product5.png" },
+          { "id": 2, "url": "/images/product5-1.png" },
+          { "id": 3, "url": "/images/product5-2.png" },
+          { "id": 4, "url": "/images/product5-3.png" }
+        ],
+        "handle":"SolitaireRing"
+    },
+    {
+      "id": 6,
+      "name": "Gold Rings",
+      "image": "/images/product6.png",
+      "price": 47.32,
+      "describ": "Machine Design, 24 Carat",
+      "describ1": "Product Code: Product 16",
+      "quantity": 1, 
+      "Vendor":"Gold Rings",
+      "imageArray": [
+          { "id": 1, "url": "/images/product6.png" },
+          { "id": 2, "url": "/images/product6-1.png" },
+          { "id": 3, "url": "/images/product6-2.png" },
+          { "id": 4, "url": "/images/product6-3.png" }
+        ],
+        "handle":"GoldRings"
+
+    },
+    {
+      "id": 7,
+      "name": "Floral Ring",
+      "image": "/images/product7.png",
+      "price": 35.32,
+      "describ": "Gold Design, 18 KT",
+      "describ1": "Product Code: Product 16",
+      "quantity": 1, 
+      "Vendor":"Floral Ring",
+      "imageArray": [
+          { "id": 1, "url": "/images/product7.png" },
+          { "id": 2, "url": "/images/product7-1.png" },
+          { "id": 3, "url": "/images/product7-2.png" },
+          { "id": 4, "url": "/images/product7-3.png" }
+        ],
+        "handle":"FloralRing"
+    },
+    {
+      "id": 8,
+      "name": "Kids Gold Pendant",
+      "image": "/images/product8.png",
+      "price": 21.78,
+      "describ": "Gold Design, 18 KT",
+      "describ1": "Product Code: Product 16",
+      "quantity": 1, 
+      "Vendor":"Gold Pendant",
+      "imageArray": [
+          { "id": 1, "url": "/images/product8.png" },
+          { "id": 2, "url": "/images/product8-1.png" },
+          { "id": 3, "url": "/images/product8-2.png" },
+          { "id": 4, "url": "/images/product8-3.png" }
+        ],
+        "handle":"GoldPendant"
+    },
+    {
+      "id": 9,
+      "name": "Gold Pear Ring",
+      "image": "/images/product9.png",
+      "price": 16.34,
+      "describ": "Gold Design, 18 KT",
+      "describ1": "Product Code: Product 16",
+      "quantity": 1, 
+      "Vendor":"Gold Ring",
+      "imageArray": [
+          { "id": 1, "url": "/images/product9.png" },
+          { "id": 2, "url": "/images/product9-1.png" },
+          { "id": 3, "url": "/images/product9-2.png" },
+          { "id": 4, "url": "/images/product9-3.png" }
+        ],
+        "handle":"PearRing"
+    },
+    {
+      "id": 10,
+      "name": "Gemstone Bracelet",
+      "image": "/images/product10.png",
+      "price": 78.67,
+      "describ": "Gold Design, 18 KT",
+      "describ1": "Product Code: Product 16",
+      "quantity": 1, 
+      "Vendor":"Gemstone Bracelet",
+      "imageArray": [
+          { "id": 1, "url": "/images/product10.png" },
+          { "id": 2, "url": "/images/product10-1.png" },
+          { "id": 3, "url": "/images/product10-2.png" },
+          { "id": 4, "url": "/images/product10-3.png" }
+        ],
+        "handle":"GemstoneBracelet"
+    },
+    {
+      "id": 11,
+      "name": "Diamond Pendant",
+      "image": "/images/product11.png",
+      "price": 56.34,
+      "describ": "Gold Design, 18 KT",
+      "describ1": "Product Code: Product 16",
+      "quantity": 1, 
+      "Vendor":"Diamond Pendant",
+      "imageArray": [
+          { "id": 1, "url": "/images/product11.png" },
+          { "id": 2, "url": "/images/product11-1.png" },
+          { "id": 3, "url": "/images/product11-2.png" },
+          { "id": 4, "url": "/images/product11-3.png" }
+        ],
+        "handle":"DiamondPendant"
+    },
+    {
+      "id": 12,
+      "name": "Chain Bracelet",
+      "image": "/images/product12.png",
+      "price": 78.67,
+      "describ": "Gold Design, 18 KT",
+      "describ1": "Product Code: Product 16",
+      "quantity": 1, 
+      "Vendor":"Gold Bracelet",
+      "imageArray": [
+          { "id": 1, "url": "/images/product12.png" },
+          { "id": 2, "url": "/images/product12-1.png" },
+          { "id": 3, "url": "/images/product12-2.png" },
+          { "id": 4, "url": "/images/product12-3.png" }
+        ],
+        "handle":"ChainBracelet"
+    }
+
+  ]
+}

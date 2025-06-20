@@ -1,5 +1,6 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { CartProvider } from './context/CartContext';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
 import Footersec from './components/footer';
 import Home from './components/Home';
@@ -10,23 +11,27 @@ import ProductDetails from './components/ProductDetails';
 import CartPage from './components/CartPage';
 import CheckoutPage from './components/CheckoutPage';
 import ThankYouPage from './components/ThankYouPage';
+import WishlistPage from './components/WishlistPage';
 
 function App() {
   return (
-    <Router>
-      <div>
-        <Header />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/Shop" element={<Shop />} />
-          <Route path="/ProductDetails/:id" element={<ProductDetails />} />
-          <Route path="/cart" element={<CartPage />} />
-          <Route path="/checkout" element={<CheckoutPage />} />
-          <Route path="/thank-you" element={<ThankYouPage />} />
-        </Routes>
-        <Footersec />
-      </div>
-    </Router>
+    <BrowserRouter>
+      <CartProvider>
+        <div>
+          <Header />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/Shop" element={<Shop />} />
+            <Route path="/ProductDetails/:id" element={<ProductDetails />} />
+            <Route path="/cart" element={<CartPage />} />
+            <Route path="/checkout" element={<CheckoutPage />} />
+            <Route path="/thank-you" element={<ThankYouPage />} />
+            <Route path="/wishlist" element={<WishlistPage />} />
+          </Routes>
+          <Footersec />
+        </div>
+      </CartProvider>
+    </BrowserRouter>
   );
 }
 
