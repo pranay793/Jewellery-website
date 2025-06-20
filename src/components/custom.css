@@ -1151,6 +1151,8 @@ footer p a{
   margin-bottom: 40px;
   margin-top: 16px;
 }
-
+.mob-gap{
+  padding-left: 8px;
+}
 
 }

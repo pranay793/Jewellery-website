@@ -72,7 +72,7 @@ useEffect(() => {
               <a href="/"><img src={logo} alt="Logo" /></a>
             </div>
           </div> 
-          <div className='col-md-6 col-1 order-lg-1 order-2'>
+          <div className='col-md-6 col-1 order-lg-1 order-2 mob-gap'>
           <div className="menu-icon" onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
             ☰
           </div>
