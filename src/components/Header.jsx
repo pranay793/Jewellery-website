@@ -71,11 +71,22 @@ useEffect(() => {
             <div className="logo">
               <a href="/"><img src={logo} alt="Logo" /></a>
             </div>
-          </div>
+          </div> 
           <div className='col-md-6 col-2 order-lg-1 order-2'>
-            <div className="menu-icon" onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
-              ☰
+          <div className="menu-icon" onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
+            ☰
+          </div>
+          {/* Mobile Slide-In Menu */}
+            <div className={`mobile-menu ${mobileMenuOpen ? 'open' : ''}`}>
+              <button className="close-btn" onClick={() => setMobileMenuOpen(false)}>×</button>
+              <nav className="mobile-nav">
+                <Link to="/" onClick={() => setMobileMenuOpen(false)}>Home</Link>
+                <Link to="#">About us</Link>
+                <Link to="/Shop" onClick={() => setMobileMenuOpen(false)}>Product</Link>
+                <Link to="#">Contact us</Link>
+              </nav>
             </div>
+            
             <nav className={`nav-links ${mobileMenuOpen ? 'open' : ''}`}>
               <a href="/">Home</a>
               <a href="#">About us</a>

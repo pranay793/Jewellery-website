@@ -107,6 +107,8 @@
   
     .slide-content h2 {
       font-size: 1.5rem;
+      line-height: 2rem;
+      font-weight: 700;
     }
   
     .slide-content p {
@@ -1098,4 +1100,44 @@ footer p a{
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(10px); }
   to { opacity: 1; transform: translateY(0); }
+}
+
+
+
+.carousel-item img{
+  width: 100%;
+}
+
+@media screen and (max-width: 767px){
+  .price-box h4 {
+    font-size: 46px;
+}
+  .describ-text {
+    font-size: 22px;
+    line-height: 32px;
+}
+  .price-text {
+    font-size: 42px;
+    line-height: 52px;
+}
+.lft-img{
+  width: 100%;
+  text-align: center;
+  margin-bottom: 30px;
+}
+.why-choose h3{
+  text-align: left;
+}
+.why-choose h2{
+  text-align: left;
+}
+.why-choose p{
+  padding: 0 5px;
+}
+.why-btn{
+  margin: 20px 0 0;
+}
+.review-area .bg-grey{
+  margin-bottom: 30px;
+}
 }
