@@ -67,12 +67,12 @@ useEffect(() => {
     <header className="header">
       <div className='container'>
         <div className='row align-items-center'>
-          <div className='col-md-3 col-7'>
+          <div className='col-md-3 col-6'>
             <div className="logo">
               <a href="/"><img src={logo} alt="Logo" /></a>
             </div>
           </div> 
-          <div className='col-md-6 col-2 order-lg-1 order-2'>
+          <div className='col-md-6 col-1 order-lg-1 order-2'>
           <div className="menu-icon" onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
             ☰
           </div>
@@ -86,7 +86,7 @@ useEffect(() => {
                 <Link to="#">Contact us</Link>
               </nav>
             </div>
-            
+
             <nav className={`nav-links ${mobileMenuOpen ? 'open' : ''}`}>
               <a href="/">Home</a>
               <a href="#">About us</a>
@@ -94,7 +94,7 @@ useEffect(() => {
               <a href="#">Contact us</a>
             </nav>
           </div>
-          <div className='col-md-3 col-3 order-lg-2 order-1'>
+          <div className='col-md-3 col-5 order-lg-2 order-1'>
             <div className="header-icons">
               {/* <span><i className="fa-solid fa-magnifying-glass"></i></span> */}
             

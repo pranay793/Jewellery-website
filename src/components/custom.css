@@ -1140,4 +1140,17 @@ footer p a{
 .review-area .bg-grey{
   margin-bottom: 30px;
 }
+.inner-banner{
+  background: url(../assets/inner-banner-mob.jpg) top center no-repeat;
+  background-size: 100%;
+  padding: 40px 0;
+}
+.middle-sec .product-slide .slick-dots{
+  position: inherit;
+  bottom: -7px;
+  margin-bottom: 40px;
+  margin-top: 16px;
+}
+
+
 }

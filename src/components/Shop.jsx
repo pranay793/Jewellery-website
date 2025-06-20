@@ -131,7 +131,7 @@ const Shop = () => {
                 {filteredProducts.map((product) => (
                   <div className='col-md-4 mb-5' key={product.id} onClick={() => handleProductClick(product)}>
                     <div style={{ cursor: "pointer" }} onClick={() => handleProductClick(product.id)}>
-                      <div className="img-box w-100">
+                      <div className="img-box">
                         <img
                           src={product.image}
                           alt={product.name}
