@@ -169,40 +169,59 @@ const ProductDetails = () => {
 
           <div className="tab-content pt-3" id="productTabContent">
             <div className="tab-pane fade show active productTabContent" id="description" role="tabpanel" aria-labelledby="description-tab">
-              <h4>More About Product</h4>
+              <h4>Elegant Style</h4>
               <p>{product.describ || "High-quality product with premium finishing."}</p>
+              <h4>Technical Description</h4>
+              <p>{product.describ1}</p>
+              <h4>Minimal & Modern</h4>
+              <p>{product.describ1}</p>
             </div>
 
             <div className="tab-pane fade" id="specification" role="tabpanel" aria-labelledby="specification-tab">
               <ul className='specification-list'>
-                <li><strong>Type:</strong> Fashion Jewelry</li>
-                <li><strong>Material:</strong> Metal Alloy</li>
-                <li><strong>Finish:</strong> Anti-Tarnish</li>
-                <li><strong>Weight:</strong> Lightweight</li>
-                <li><strong>Warranty:</strong> 1 Year</li>
+                <li><strong>Product Type:</strong> {product.Vendor} </li>
+                <li><strong>Material:</strong> {product.Material} </li>
+                <li><strong>Finish:</strong> {product.Finish} </li>
+                <li><strong>Weight:</strong> {product.Weight} </li>
+                <li><strong>Gender:</strong> {product.Gender} </li>
+                <li><strong>Design Style:</strong> {product.DesignStyle} </li>
+                <li><strong>Occasion:</strong> {product.Occasion} </li>
+                <li><strong>Hypoallergenic:</strong> {product.Hypoallergenic} </li>
+                <li><strong>Warranty:</strong> {product.Warranty} </li>
               </ul>
             </div>
 
             <div className="tab-pane fade" id="reviews" role="tabpanel" aria-labelledby="reviews-tab">
-              <div className="review-section">
-                <div className="review-box">
-                  <div className="review-header d-flex align-items-center gap-3">
-                    <img src="/images/reviewer1.jpg" alt="Reviewer" className="reviewer-img" style={{ width: '50px', height: '50px', borderRadius: '50%' }} />
-                    <div>
-                      <strong>Priya Sharma</strong>
-                      <div className="star-rating">
-                        <i className="fa-solid fa-star"></i>
-                        <i className="fa-solid fa-star"></i>
-                        <i className="fa-solid fa-star"></i>
-                        <i className="fa-solid fa-star"></i>
-                        <i className="fa-regular fa-star"></i>
-                      </div>
-                    </div>
-                  </div>
-                  <p className="review-date">Reviewed on: 10 June 2025</p>
-                  <p className="review-text">Beautiful pendant! The quality is excellent, and it looks even better in person.</p>
-                </div>
+            <div className="review-section">
+    {product.reviews && product.reviews.length > 0 ? (
+      product.reviews.map((review) => (
+        <div className="review-box" key={review.id}>
+          <div className="review-header d-flex align-items-center gap-3">
+            <img src={review.image} alt={review.name} className="reviewer-img" style={{ width: '50px', height: '50px', borderRadius: '50%' }} />
+            <div>
+              <strong>{review.name}</strong>
+              <div className="star-rating">
+                {[...Array(5)].map((_, index) => (
+                  <i
+                    key={index}
+                    className={
+                      index < review.rating
+                        ? "fa-solid fa-star"
+                        : "fa-regular fa-star"
+                    }
+                  ></i>
+                ))}
               </div>
+            </div>
+          </div>
+          <p className="review-date">Reviewed on: {review.date}</p>
+          <p className="review-text">{review.text}</p>
+        </div>
+      ))
+    ) : (
+      <p>No reviews available for this product yet.</p>
+    )}
+  </div>
             </div>
           </div>
         </div>

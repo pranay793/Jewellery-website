@@ -90,7 +90,16 @@ const Shop = () => {
                 className="toggle-filter-btn"
                 onClick={() => setShowFilters(!showFilters)}
               >
-                {showFilters ? "🔼 Hide Filters" : "🔽 Show Filters"}
+                {showFilters ? (
+  <>
+    Hide Left Panel <i className="fa-solid fa-angle-up"></i>
+  </>
+) : (
+  <>
+    Show Left Panel <i className="fa-solid fa-angle-down"></i>
+  </>
+)}
+
               </button>
             </div>
 
@@ -137,7 +146,7 @@ const Shop = () => {
                 {filteredProducts.map((product) => (
                   <div className='col-md-4 mb-5' key={product.id} onClick={() => handleProductClick(product)}>
                     <div style={{ cursor: "pointer" }}>
-                      <div className="img-box">
+                      <div className="img-box shop-box">
                         <img
                           src={product.image}
                           alt={product.name}
@@ -160,7 +169,7 @@ const Shop = () => {
                       </div>
                       <div className="price-box">
                         <h4>{product.name}</h4>
-                        <p className="describ-text">{product.describ}</p>
+                        <p className="describ-text">{product.productdescrib}</p>
                         <p className="price-text">${product.price.toFixed(2)}/10MG</p>
                         <ul className="star-ratting">
                           <li><i className="fa-solid fa-star"></i></li>

@@ -5,13 +5,50 @@
       "name": "Chain Bracelet",
       "image": "/images/product1.png",
       "price": 96.99,
-      "describ": "Machine Design, 24 Carat",
-      "describ1": "Product Code: Product 16",
+      "productdescrib": "Hand Design, 24 Carat",
+      "describ": "Add a touch of timeless elegance to your wrist with this 24 Carat Chain Bracelet. Meticulously crafted with machine precision, it offers a sleek, modern look that pairs beautifully with both casual and formal outfits.",
+      "describ1": "This chain bracelet is crafted in 24 Carat gold with a machine-cut design for refined symmetry and shine. Lightweight yet durable, it features interlinked oval patterns offering flexibility and comfort for daily wear. Ideal for gifting or everyday luxury.",
+      "describ2": "Simple, stylish, and sophisticated — the Chain Bracelet is the perfect everyday accessory. Made with 24K gold and a clean machine finish, it blends modern minimalism with timeless appeal.",
       "quantity": 1,
       "Vendor": "Chain Bracelet",
       "Weight": "10Gm",
       "Purity": "22K",
       "Availability": "Stock",
+      "Material":"24KT Pure Gold",
+      "Finish" : "High Polish, Machine-Cut Design",
+      "Gender" :"Unisex",
+      "DesignStyle" : "Classic Interlink Chain",
+      "Occasion" : "Casual, Office Wear, Gifting",
+      "Hypoallergenic" : "Yes",
+      "Warranty" : "1 Year",
+      "reviews": [
+    {
+      "id": 1,  
+      "name": "Priya Sharma", 
+      "date": "10 June 2025",
+      "rating": 4,
+      "text": "Absolutely loved the craftsmanship of this bracelet. It’s lightweight, yet feels luxurious on the wrist. I wear it daily to work and it still shines like new. Perfect blend of tradition and modern design. Highly recommend for gifting or self-use!",
+      "image": "/images/reviewer1.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Anjali Mehra",
+      "date": "15 June 2025",
+      "rating": 5,
+      "text": "The Chain Bracelet is absolutely stunning! The 24K gold has a beautiful shine and the design is so elegant—it goes perfectly with my sarees and office wear. Got many compliments during a family function. Totally worth it!",
+      "image": "/images/reviewer2.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Rahul Mehta",
+      "date": "11 June 2025",
+      "rating": 3,
+      "text": "Bought this Chain Bracelet as a gift for my sister on Raksha Bandhan. The finish is really premium and it looks even better in real life. She absolutely loved it. Packaging and delivery were also great. Slightly pricey, but the quality justifies it.",
+      "image": "/images/reviewer3.jpg"
+    }
+    
+    
+  ],
       "imageArray": [
         { "id": 1, "url": "/images/product1.png" },
         { "id": 2, "url": "/images/product1-1.png" },
@@ -25,13 +62,40 @@
       "name": "Gold Rings",
       "image": "/images/product2.png",
       "price": 85.29,
-      "describ": "Hand Design, 24 Carat",
-      "describ1": "Product Code: Product 16",
+      "productdescrib": "Machine Design, 22 Carat",
+      "describ": "Crafted in pure 24 Carat gold, these beautifully designed gold rings exude classic elegance. Perfect for weddings, engagements, or daily wear, each piece reflects fine craftsmanship and timeless beauty.",
+      "describ1": "Simple yet stunning — these gold rings are designed for the modern individual. With clean lines and a flawless finish, they bring sophistication to everyday style.",
+      "describ2": "Designed with intricate hand detailing and made from certified 24KT gold, these rings combine durability with luxury. A must-have for those who value quality, tradition, and elegance in every touch.",
       "quantity": 1,
       "Vendor": "Gold Rings",
       "Weight": "8Gm",
       "Purity": "24K",
       "Availability": "Stock",
+      "Material":"22KT Pure Gold",
+      "Finish" : "High Polish Glossy Finish",
+      "Gender" :"Women",
+      "DesignStyle" : "Hand-Crafted / Machine-Cut (varies by model)",
+      "Occasion" : "Daily Wear, Engagement, Festive, Gifting",
+      "Hypoallergenic" : "Yes",
+      "Warranty" : "2 Year",
+      "reviews": [
+        {
+          "id": 1,  
+          "name": "Meena Rathi", 
+          "date": "05 June 2025",
+          "rating": 5,
+          "text": "The gold ring is absolutely beautiful! The intricate hand design and the shine of the gold make it stand out. I bought it for my engagement, and everyone kept asking where I got it from. Feels very premium and traditional.",
+          "image": "/images/reviewer4.jpg"
+        },
+        {
+          "id": 2,
+          "name": "Ritika Deshmukh",
+          "date": "19 June 2025",
+          "rating": 3,
+          "text": "Loved the finish and fit of the gold ring. It has a very graceful appearance—ideal for festive wear. I paired it with my silk saree for a wedding, and it looked fabulous. Great value for the price!",
+          "image": "/images/reviewer5.jpg"
+        } 
+      ],
       "imageArray": [
         { "id": 1, "url": "/images/product2.png" },
         { "id": 2, "url": "/images/product2-1.png" },
@@ -45,13 +109,48 @@
       "name": "Gemstone Earrings",
       "image": "/images/product3.png",
       "price": 76.77,
-      "describ": "Machine Design, 24 Carat",
-      "describ1": "Product Code: Product 16",
+      "productdescrib": "Machine Design, 18k Carat",
+      "describ": "Add a touch of brilliance to your look with our exquisite Gemstone Earrings. Crafted with precision, each piece features vibrant gemstones set in a 24 Carat gold finish — perfect for elevating both casual and formal attire.",
+      "describ1": "Bright, bold, and beautiful — these Gemstone Earrings are a celebration of color and style. Designed for women who love to stand out, the vibrant stones sparkle with every turn, making them a go-to choice for parties and special occasions.",
+      "describ2": "Inspired by royal heritage, these earrings blend traditional gold craftsmanship with the timeless beauty of hand-selected gemstones. A perfect blend of culture and elegance, ideal for festive wear and weddings.",
       "quantity": 1,
       "Vendor": "Gemstone Earrings",
       "Weight": "6Gm",
       "Purity": "18K",
       "Availability": "Stock",
+      "Material":"24KT Pure Gold",
+      "Finish" : "High Polish",
+      "Gender" :"Women",
+      "DesignStyle" : "Machine-Crafted / Hand-Finished",
+      "Occasion" : "Party, Festive, Wedding, Gift",
+      "Hypoallergenic" : "No",
+      "Warranty" : "1 Year",
+      "reviews": [
+        {
+          "id": 1,  
+          "name": "Priyanka Nair", 
+          "date": "11 June 2025",
+          "rating": 5,
+          "text": "These gemstone earrings are absolutely gorgeous! The colors are vibrant, and they add a subtle sparkle to any outfit. I wore them to a family pooja, and even my grandmother complimented them. Lightweight and comfortable for long hours.",
+          "image": "/images/reviewer6.jpg"
+        },
+        {
+          "id": 2,
+          "name": "Nivedita Sharma",
+          "date": "13 June 2025",
+          "rating": 4,
+          "text": "Stylish yet traditional — exactly what I was looking for! The design blends perfectly with both kurtas and western wear. I just wish the clasp was a little sturdier, but overall, I’m really happy with the purchase.",
+          "image": "/images/reviewer7.jpg"
+        }, 
+        {
+          "id": 3,
+          "name": "Sneha Kulkarni",
+          "date": "09 June 2025",
+          "rating": 5,
+          "text": "Bought these earrings for a friend's wedding and I’m obsessed! The gemstone detailing is so intricate, and they catch the light beautifully. Got so many compliments. Definitely a statement piece worth having!",
+          "image": "/images/reviewer8.jpg"
+        }
+      ],
       "imageArray": [
         { "id": 1, "url": "/images/product3.png" },
         { "id": 2, "url": "/images/product3-1.png" },
@@ -65,13 +164,56 @@
       "name": "Royal Earrings",
       "image": "/images/product4.png",
       "price": 67.11,
-      "describ": "Hand Wash, 22 Carat",
-      "describ1": "Product Code: Product 16",
+      "productdescrib": "Hand Design, 24 Carat",
+      "describ": "Embrace timeless beauty with our Royal Earrings, inspired by regal Indian heritage. Crafted in 22 Carat gold with intricate hand-wash detailing, these earrings add a majestic charm to festive and traditional looks.",
+      "describ1": "Make every moment royal. These elegantly crafted Royal Earrings blend heritage craftsmanship with luxurious gold tones, making them the perfect accessory for weddings, celebrations, and grand occasions.",
+      "describ2": "Designed for queens of everyday life, these Royal Earrings offer a delicate mix of shine and sophistication. With a classic gold finish and elegant contours, they suit both modern and ethnic wardrobes effortlessly.",
       "quantity": 1,
       "Vendor": "Royal Earrings",
       "Weight": "10Gm",
       "Purity": "22K",
       "Availability": "Stock",
+      "Material":"22KT Gold",
+      "Finish" : "Hand Wash Polish Antique Gloss",
+      "Gender" :"Women",
+      "DesignStyle" : "Traditional Royal Handcrafted Design",
+      "Occasion" : "Bridal, Festive, Ethnic Celebrations",
+      "Hypoallergenic" : "Yes",
+      "Warranty" : "1 Year",
+      "reviews": [
+        {
+          "id": 1,  
+          "name": "Ishita Malhotra", 
+          "date": "9 June 2025",
+          "rating": 5,
+          "text": "These Royal Earrings truly live up to their name. The design is regal and elegant — perfect for weddings and festivals. I wore them with a lehenga and they instantly elevated my look. Super light and comfortable too!",
+          "image": "/images/reviewer9.jpg"
+        },
+        {
+          "id": 2,
+          "name": "Neelam Joshi",
+          "date": "14 June 2025",
+          "rating": 4,
+          "text": "Very classy design! The detailing is excellent, and they add a rich traditional touch to my outfits. Only wish the packaging was better, but the product itself is flawless. Would definitely buy again.",
+          "image": "/images/reviewer10.jpg"
+        }, 
+        {
+          "id": 3,
+          "name": "Pooja Iyer",
+          "date": "17 June 2025",
+          "rating": 5,
+          "text": "Absolutely in love with these earrings! They’re beautifully crafted and give a royal touch to even a simple saree. Got compliments from relatives at a family function. Definitely a must-have in your jewellery box.",
+          "image": "/images/reviewer11.jpg"
+        },
+        {
+          "id": 4,
+          "name": "Sanjana Rao",
+          "date": "20 June 2025",
+          "rating": 3,
+          "text": "These earrings are pure elegance! The gold finish and traditional craftsmanship make them perfect for South Indian functions. I wore them for my cousin’s wedding with a Kanjeevaram saree — they looked stunning and felt light all evening. Totally worth it!",
+          "image": "/images/reviewer12.jpg"
+        }
+      ],
       "imageArray": [
         { "id": 1, "url": "/images/product4.png" },
         { "id": 2, "url": "/images/product4-1.png" },
@@ -85,13 +227,48 @@
       "name": "Solitaire Ring",
       "image": "/images/product5.png",
       "price": 54.99,
-      "describ": "Machine Design, 24 Carat",
-      "describ1": "Product Code: Product 16",
+      "productdescrib": "Machine Design, 18k Carat",
+      "describ": "Minimalist yet striking — this Solitaire Ring showcases a single dazzling gemstone that radiates brilliance. Crafted with machine-cut precision and a sleek gold band, it’s a must-have for modern trendsetters.",
+      "describ1": "Whether it's a special occasion or a spontaneous gesture, the Solitaire Ring is the perfect gift. Its clean design and refined sparkle make it a cherished piece in any jewelry collection.",
+      "describ2": "Sometimes, less is more. This elegant Solitaire Ring speaks volumes with its simplicity. Designed to stand alone or stack with other favorites, it's a staple of graceful style.",
       "quantity": 1,
       "Vendor": "Solitaire Ring",
       "Weight": "14Gm",
       "Purity": "22K",
       "Availability": "Stock",
+      "Material":"24KT Gold",
+      "Finish" : "High Polish / Machine-Cut Precision",
+      "Gender" :"Women",
+      "DesignStyle" : "Prong Bezel Setting",
+      "Occasion" : "Engagement, Anniversary, Gift, Daily Wear",
+      "Hypoallergenic" : "Yes",
+      "Warranty" : "1 Year",
+      "reviews": [
+        {
+          "id": 1,  
+          "name": "Rhea Kapoor", 
+          "date": "12 June 2025",
+          "rating": 5,
+          "text": "The Solitaire Ring is absolutely stunning! The stone catches the light beautifully and looks very elegant. I’ve been wearing it daily to work, and it adds the perfect touch of sophistication to my look.",
+          "image": "/images/reviewer13.jpg"
+        },
+        {
+          "id": 2,
+          "name": "Aarav Mehta",
+          "date": "16 June 2025",
+          "rating": 4,
+          "text": "Got this for my fiancée as part of our engagement. She loved it! The design is simple but classy, and it fits perfectly. Just felt the delivery could have been quicker — otherwise, no complaints.",
+          "image": "/images/reviewer14.jpg"
+        }, 
+        {
+          "id": 3,
+          "name": "Divya Menon",
+          "date": "19 June 2025",
+          "rating": 5,
+          "text": "This ring exceeded my expectations. The solitaire looks premium and the gold band feels very solid. I wore it to a wedding, and people assumed it was a designer piece. Great buy for the price!",
+          "image": "/images/reviewer15.jpg"
+        }
+      ],
       "imageArray": [
         { "id": 1, "url": "/images/product5.png" },
         { "id": 2, "url": "/images/product5-1.png" },
@@ -105,13 +282,48 @@
       "name": "Gold Rings",
       "image": "/images/product6.png",
       "price": 47.32,
-      "describ": "Machine Design, 24 Carat",
-      "describ1": "Product Code: Product 16",
+      "productdescrib": "Hand Design, 18 Carat",
+      "describ": "Timeless in design and rich in tradition, these Gold Rings are crafted from premium 24 Carat gold. Whether worn alone or stacked, they bring effortless elegance to any outfit — perfect for daily wear or special occasions.",
+      "describ1": "Designed for moments that matter, our Gold Rings reflect the beauty of heritage and craftsmanship. With intricate detailing and a warm golden glow, they’re ideal for weddings, festive celebrations, and family traditions.",
+      "describ2": "Less is truly more. These Gold Rings feature clean lines and a smooth finish — ideal for the modern minimalist who values quiet luxury and everyday sophistication.",
       "quantity": 1,
       "Vendor": "Gold Rings",
       "Weight": "12Gm",
       "Purity": "18K",
       "Availability": "Stock",
+      "Material":"24KT Pure Gold",
+      "Finish" : "High Polish / Glossy Shine",
+      "Gender" :"Women",
+      "DesignStyle" : "Handcrafted / Machine-Cut",
+      "Occasion" : "Daily Wear, Engagement, Festival, Gifting",
+      "Hypoallergenic" : "Yes (Nickel-Free, Skin Safe)",
+      "Warranty" : "3 Year",
+      "reviews": [
+        {
+          "id": 1,  
+          "name": "Ananya Singh", 
+          "date": "12 June 2025",
+          "rating": 5,
+          "text": "These gold rings are simply beautiful! The craftsmanship is top-notch and they fit perfectly. I ordered a pair for daily wear, and they still look brand new after weeks of use. Subtle, elegant, and durable — just what I wanted!",
+          "image": "/images/reviewer16.jpg"
+        },
+        {
+          "id": 2,
+          "name": "Rohit Verma",
+          "date": "15 June 2025",
+          "rating": 3,
+          "text": "Ordered this as a gift for my mother’s birthday. The finish is excellent and the design feels timeless. She absolutely loved it. It arrived in a lovely box too. Slightly thinner than expected, but still worth it!",
+          "image": "/images/reviewer17.jpg"
+        }, 
+        {
+          "id": 3,
+          "name": "Sneha Bhattacharya",
+          "date": "18 June 2025",
+          "rating": 4,
+          "text": "Very impressed with the quality of these rings. I paired them with my ethnic outfit for a family function and got so many compliments. Feels very traditional yet trendy. Would recommend for both gifting and personal use.",
+          "image": "/images/reviewer18.jpg"
+        }
+      ],
       "imageArray": [
         { "id": 1, "url": "/images/product6.png" },
         { "id": 2, "url": "/images/product6-1.png" },
@@ -125,13 +337,40 @@
       "name": "Floral Ring",
       "image": "/images/product7.png",
       "price": 35.32,
-      "describ": "Gold Design, 18 KT",
-      "describ1": "Product Code: Product 16",
+      "productdescrib": "Gold Design, 18 Carat",
+      "describ": "Inspired by nature’s beauty, the Floral Ring features an intricate flower motif crafted in radiant 18KT gold. Its delicate design brings a soft, romantic touch to any look — perfect for those who appreciate elegance in every detail.",
+      "describ1": "Light, lovely, and full of charm — the Floral Ring is designed for daily wear with a hint of graceful flair. Made from polished 18KT gold, it pairs beautifully with casual and dressy outfits alike.",
+      "describ2": "This bold yet elegant Floral Ring combines the art of gold craftsmanship with a modern floral silhouette. A stunning piece that speaks of confidence, individuality, and timeless beauty",
       "quantity": 1,
       "Vendor": "Floral Ring",
       "Weight": "12Gm",
       "Purity": "22K",
       "Availability": "Stock",
+      "Material":"22KT Pure Gold",
+      "Finish" : "Glossy / Matte Combination",
+      "Gender" :"Women",
+      "DesignStyle" : "Nature-Inspired Floral Motif",
+      "Occasion" : "Daily Wear, Gifts, Festivals, Romantic Celebrations",
+      "Hypoallergenic" : "Yes (Skin Safe)",
+      "Warranty" : "1 Year",
+      "reviews": [
+        {
+          "id": 1,  
+          "name": "Megha Deshpande", 
+          "date": "13 June 2025",
+          "rating": 5,
+          "text": "Such a delicate and beautiful piece! The floral design is so graceful — it gives a feminine charm without being too flashy. Perfect for daily wear, and it pairs nicely with both western and traditional outfits.",
+          "image": "/images/reviewer19.jpg"
+        },
+        {
+          "id": 2,
+          "name": "Kajal Jain",
+          "date": "17 June 2025",
+          "rating": 5,
+          "text": "I bought this floral ring for my younger sister as a Rakhi gift, and she absolutely loved it. The detailing is lovely and the ring is very lightweight. A great buy at this price point!",
+          "image": "/images/reviewer17.jpg"
+        } 
+      ],
       "imageArray": [
         { "id": 1, "url": "/images/product7.png" },
         { "id": 2, "url": "/images/product7-1.png" },
@@ -141,17 +380,60 @@
       "handle": "FloralRing"
     },
     {
-      "id": 8,
+      "id": 8, 
       "name": "Kids Gold Pendant",
       "image": "/images/product8.png",
       "price": 21.78,
-      "describ": "Gold Design, 18 KT",
-      "describ1": "Product Code: Product 16",
+      "productdescrib": "Machine Design, 18k Carat",
+      "describ": "Designed especially for little ones, this Kids Gold Pendant features a playful yet elegant design crafted in 18KT gold. Lightweight, comfortable, and charming — it’s perfect for everyday wear or special occasions.",
+      "describ1": "Celebrate milestones with the perfect keepsake. This adorable gold pendant is crafted with love in 18KT gold, making it a thoughtful gift for birthdays, baby showers, naming ceremonies, or festive celebrations.",
+      "describ2": "Made from skin-safe 18KT gold, the Kids Gold Pendant offers a beautiful blend of safety and style. Its smooth edges and lightweight build ensure all-day comfort for active kids.",
       "quantity": 1,
       "Vendor": "Gold Pendant",
       "Weight": "8Gm",
       "Purity": "22K",
       "Availability": "Stock",
+      "Material":"22KT Pure Gold",
+      "Finish" : "High Polish / Smooth Edges for Safety",
+      "Gender" :"Kids Girl",
+      "DesignStyle" : "Cute / Playful / Character or Symbol-Based",
+      "Occasion" : "Birthday, Naming Ceremony, Daily Wear",
+      "Hypoallergenic" : "Yes",
+      "Warranty" : "2 Year",
+      "reviews": [
+        {
+          "id": 1,  
+          "name": "Poonam Rathi", 
+          "date": "11 June 2025",
+          "rating": 5,
+          "text": "I bought this for my daughter’s 5th birthday and she was so happy! The design is adorable and the gold has a lovely finish. It’s lightweight and safe for daily wear. Perfect for little kids!",
+          "image": "/images/reviewer21.jpg"
+        },
+        {
+          "id": 2,
+          "name": "Suresh Kumar",
+          "date": "14 June 2025",
+          "rating": 4,
+          "text": "A great gifting option for naming ceremonies or birthdays. I gave this to my niece — she loved it instantly. It came well-packaged and looks exactly like the pictures online. Happy with the purchase.",
+          "image": "/images/reviewer22.jpg"
+        }, 
+        {
+          "id": 3,
+          "name": "Ritika Shah",
+          "date": "18 June 2025",
+          "rating": 5,
+          "text": "The pendant is simple yet elegant — just right for kids. What I liked the most is that it’s hypoallergenic, so no irritation on my son’s skin. Would definitely recommend to other parents.",
+          "image": "/images/reviewer23.jpg"
+        },
+        {
+          "id": 4,
+          "name": "Anil Meena",
+          "date": "20 June 2025",
+          "rating": 5,
+          "text": "Good craftsmanship and quality. I was searching for something gold but minimal for my daughter — this was perfect. A tiny bit smaller than expected, but it suits kids perfectly.",
+          "image": "/images/reviewer24.jpg"
+        }
+      ],
       "imageArray": [
         { "id": 1, "url": "/images/product8.png" },
         { "id": 2, "url": "/images/product8-1.png" },
@@ -165,13 +447,48 @@
       "name": "Gold Pear Ring",
       "image": "/images/product9.png",
       "price": 16.34,
-      "describ": "Gold Design, 18 KT",
-      "describ1": "Product Code: Product 16",
+      "productdescrib": "Hand Design, 24 Carat",
+      "describ": "Inspired by the soft curves of a pear, this Gold Pear Ring is a true celebration of nature’s elegance. Crafted in glowing 18KT gold, it offers a refined silhouette that’s both graceful and modern.",
+      "describ1": "The Gold Pear Ring features a unique teardrop-shaped design that draws just the right amount of attention. Perfect for women who love jewelry that blends subtle sophistication with standout style.",
+      "describ2": "Symbolizing love and clarity, the Gold Pear Ring makes a meaningful gift for anniversaries, birthdays, or “just because.” Handcrafted in 18KT gold, it's a timeless piece to cherish forever.",
       "quantity": 1,
-      "Vendor": "Gold Ring",
+      "Vendor": "Gold Pear Ring",
       "Weight": "18Gm",
       "Purity": "24K",
       "Availability": "Stock",
+      "Material":"24KT Pure Gold",
+      "Finish" : "High Polish / Glossy",
+      "Gender" :"Women",
+      "DesignStyle" : "Classic / Contemporary (varies by model)",
+      "Occasion" : "Engagement, Gifting, Daily Wear, Traditional Events",
+      "Hypoallergenic" : "Yes (Nickel-Free, Skin Friendly)",
+      "Warranty" : "1 Year",
+      "reviews": [
+        {
+          "id": 1,  
+          "name": "Neha Patil", 
+          "date": "12 June 2025",
+          "rating": 5,
+          "text": "The pear-shaped design is absolutely beautiful and stands out so well. I wear it daily, and it still shines like new. It’s lightweight, elegant, and goes well with ethnic as well as western outfits.",
+          "image": "/images/reviewer25.jpg"
+        },
+        {
+          "id": 2,
+          "name": "Rupal Joshi",
+          "date": "19 June 2025",
+          "rating": 4,
+          "text": "This ring is a real gem! The pear design gives it a modern twist, and the quality feels premium. I’ve received so many compliments from friends. Excellent finish and very comfortable to wear.",
+          "image": "/images/reviewer26.jpg"
+        }, 
+        {
+          "id": 3,
+          "name": "Rupali Shah",
+          "date": "16 June 2025",
+          "rating": 5,
+          "text": "Bought this as a surprise for my wife. She loved the unique shape and minimalistic style. The ring is well-made and fits perfectly. Great option for special occasions or everyday charm.",
+          "image": "/images/reviewer27.jpg"
+        }
+      ],
       "imageArray": [
         { "id": 1, "url": "/images/product9.png" },
         { "id": 2, "url": "/images/product9-1.png" },
@@ -185,13 +502,49 @@
       "name": "Gemstone Bracelet",
       "image": "/images/product10.png",
       "price": 78.67,
-      "describ": "Gold Design, 18 KT",
-      "describ1": "Product Code: Product 16",
+      "productdescrib": "Gold Design, 18 Carat",
+      "describ": "Add a burst of color and sophistication to your wrist with our Gemstone Bracelet. Set in radiant 18KT gold, this piece features finely cut gemstones that sparkle with every movement — perfect for making a graceful statement.",
+      "describ1": "Bold yet refined, the Gemstone Bracelet blends contemporary style with classic elegance. Each stone is hand-selected and meticulously set in a sleek gold band — ideal for both everyday wear and special occasions.",
+      "describ2": "Lightweight and full of life, the Gemstone Bracelet adds a pop of personality to your daily look. With its vibrant hues and smooth gold finish, it’s your go-to accessory for effortless style.",
       "quantity": 1,
       "Vendor": "Gemstone Bracelet",
       "Weight": "20Gm",
       "Purity": "24K",
       "Availability": "Stock",
+      "Material":"24KT Pure Gold",
+      "Finish" : "High Polish, Smooth Texture",
+      "Gender" :"Unisex",
+      "DesignStyle" : "Elegant, Handcrafted Link or Bead Design",
+      "Occasion" : "Party, Festive, Daily Wear, Gifting",
+      "Hypoallergenic" : "Yes (Nickel-Free, Skin Friendly)",
+      "Warranty" : "1 Year",
+      "reviews": [
+        {
+          "id": 1,  
+          "name": "Tanvi Kapoor", 
+          "date": "10 June 2025",
+          "rating": 5,
+          "text": "The pear-shaped design is absolutely beautiful and stands out so well. I wear it daily, and it still shines like new. It’s lightweight, elegant, and goes well with ethnic as well as western outfits.",
+          "image": "/images/reviewer2.jpg"
+        },
+        {
+          "id": 2,
+          "name": "Divya Ramesh",
+          "date": "14 June 2025",
+          "rating": 4,
+          "text": "The design is elegant and colorful, just the right amount of bling for festive wear. It’s comfortable and fits nicely on my wrist. Would have loved a matching ring or earrings with it!",
+          "image": "/images/reviewer11.jpg"
+        },
+        {
+          "id": 3,
+          "name": "Ayesha Khan",
+          "date": "18 June 2025",
+          "rating": 4,
+          "text": "Loved this piece from the moment I opened the box! The gemstones sparkle beautifully, and the bracelet looks even better in person. Ideal for gifting or adding a bit of glam to your outfits.",
+          "image": "/images/reviewer8.jpg"
+        }
+        
+      ],
       "imageArray": [
         { "id": 1, "url": "/images/product10.png" },
         { "id": 2, "url": "/images/product10-1.png" },
@@ -205,13 +558,41 @@
       "name": "Diamond Pendant",
       "image": "/images/product11.png",
       "price": 56.34,
-      "describ": "Gold Design, 18 KT",
-      "describ1": "Product Code: Product 16",
+      "productdescrib": "Diamond Gold, 22 Carat",
+      "describ": "Radiating grace and sparkle, this Diamond Pendant is the definition of timeless beauty. Crafted in 18KT gold and set with a brilliant-cut diamond, it’s perfect for elevating both casual and formal looks.",
+      "describ1": "Add a hint of refined glamour to your day with this delicate Diamond Pendant. Lightweight and elegant, it’s designed to shine with every outfit — from office wear to evening elegance.",
+      "describ2": "Whether it’s a birthday, anniversary, or “just because,” this Diamond Pendant is a meaningful gift that symbolizes love and lasting memories. Beautifully crafted in 18KT gold for a luxurious finish.",
       "quantity": 1,
       "Vendor": "Diamond Pendant",
       "Weight": "14Gm",
       "Purity": "22K",
       "Availability": "Stock",
+      "Material":"22KT Pure Gold",
+      "Finish" : "High Polish, Mirror Finish",
+      "Gender" :"Women",
+      "DesignStyle" : "Natural Diamond / Certified Lab-Grown",
+      "Occasion" : "Daily Wear, Anniversary, Gifting, Bridal",
+      "Hypoallergenic" : "Yes (Nickel-Free, Skin Friendly)",
+      "Warranty" : "2 Year",
+      "reviews": [
+        {
+          "id": 1,  
+          "name": "Sneha Malhotra", 
+          "date": "15 June 2025",
+          "rating": 5,
+          "text": "Absolutely elegant! The diamond detailing is delicate yet noticeable. I wear it daily to work and it adds a classy touch to all my outfits. Truly timeless and worth every rupee!",
+          "image": "/images/reviewer28.jpg"
+        },
+        {
+          "id": 2,
+          "name": "Priyanka Shetty",
+          "date": "21 June 2025",
+          "rating": 3,
+          "text": "Minimal, elegant, and sparkling — just the way I like it! The quality is top-notch, and the chain is strong yet light. Ideal for daily wear or special occasions. Highly recommended.",
+          "image": "/images/reviewer29.jpg"
+        }
+        
+      ],
       "imageArray": [
         { "id": 1, "url": "/images/product11.png" },
         { "id": 2, "url": "/images/product11-1.png" },
@@ -222,16 +603,51 @@
     },
     {
       "id": 12,
-      "name": "Chain Bracelet",
+      "name": "Gold Bracelet",
       "image": "/images/product12.png",
       "price": 78.67,
-      "describ": "Gold Design, 18 KT",
-      "describ1": "Product Code: Product 16",
+      "productdescrib": "Machine Design, 24 Carat",
+      "describ": "Crafted in luxurious 24KT gold, the Chain Bracelet blends traditional charm with modern simplicity. Its interlocking links offer a sleek, fluid design that sits comfortably on the wrist — perfect for everyday elegance or layering with other favorites.",
+      "describ1": "A true staple in refined style, this Chain Bracelet features a clean, machine-cut design with a polished gold finish. Its lightweight yet durable construction makes it ideal for daily wear with a hint of sophistication.",
+      "describ2": "Elegant, versatile, and always in style — the Chain Bracelet is the perfect gift for birthdays, anniversaries, or simply to treat yourself. Made with 24KT gold, it’s a meaningful piece to treasure for years to come.",
       "quantity": 1,
       "Vendor": "Gold Bracelet",
       "Weight": "25Gm",
       "Purity": "24K",
       "Availability": "Stock",
+      "Material":"24KT Pure Gold",
+      "Finish" : "High Polish, Glossy",
+      "Gender" :"Unisex / Women",
+      "DesignStyle" : "Classic / Contemporary Chain or Bangle Design",
+      "Occasion" : "Daily Wear, Office, Traditional, Gift",
+      "Hypoallergenic" : "Yes (Nickel-Free, Hypoallergenic)",
+      "Warranty" : "1 Year",
+      "reviews": [
+        {
+          "id": 1,  
+          "name": "Meera Deshmukh", 
+          "date": "12 June 2025",
+          "rating": 5,
+          "text": "This gold bracelet is simply beautiful! It has a classic design with a smooth finish and feels very premium. I wore it to a family function and received many compliments. Perfect for both everyday use and festive wear.",
+          "image": "/images/reviewer5.jpg"
+        },
+        {
+          "id": 2,
+          "name": "Amit Verma",
+          "date": "16 June 2025",
+          "rating": 4,
+          "text": "Bought this as a Raksha Bandhan gift for my sister. She absolutely loved it! The quality is excellent, and the polish hasn’t faded even after several wears. Worth the price.",
+          "image": "/images/reviewer30.jpg"
+        },
+        {
+          "id": 3,
+          "name": "Roshni Agarwal",
+          "date": "19 June 2025",
+          "rating": 5,
+          "text": "Elegant and lightweight — just what I was looking for! The bracelet fits perfectly on the wrist and doesn’t feel bulky. Goes well with both Indian and western attire. Definitely a must-have!",
+          "image": "/images/reviewer19.jpg"
+        }
+      ],
       "imageArray": [
         { "id": 1, "url": "/images/product12.png" },
         { "id": 2, "url": "/images/product12-1.png" },

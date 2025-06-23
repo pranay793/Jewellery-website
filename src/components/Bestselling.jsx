@@ -125,7 +125,7 @@ const Bestselling = () => {
                 </div>
                 <div className="price-box">
                   <h4>{product.name}</h4>
-                  <p className="describ-text">{product.describ}</p>
+                  <p className="describ-text">{product.productdescrib}</p>
                   <p className="price-text">${product.price}</p>
                   <ul className="star-ratting">
                     <li><i className="fa-solid fa-star"></i></li>
