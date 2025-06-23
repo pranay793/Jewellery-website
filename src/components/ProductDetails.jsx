@@ -113,7 +113,9 @@ const ProductDetails = () => {
 
               <h3 className='price'>${(product.price * quantity).toFixed(2)}</h3>
               <p className='descrip'>Brands: <span>{product.Vendor}</span></p>
-              <p className='descrip'>Description: <span>{product.describ}</span></p>
+              <p className='descrip'>Weight: <span>{product.Weight}</span></p>
+              <p className='descrip'>Purity: <span>{product.Purity}</span></p>
+              <p className='descrip'>Availability: <span className='green-text'>{product.Availability}</span></p>
 
               <h4 className='mt-3'>Quantity</h4>
               <div className="quantity-wrapper" style={{ display: 'flex', alignItems: 'center' }}>

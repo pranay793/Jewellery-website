@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { CartContext } from "../context/CartContext";
 import Bestselling from './Bestselling';
 import Trendsec from './TrendSec';
+import './custom.css';
 
 const Shop = () => {
   const navigate = useNavigate();
@@ -13,6 +14,7 @@ const Shop = () => {
   const [wishlist, setWishlist] = useState([]);
   const [productsData, setProducts] = useState([]);
   const [popupMessage, setPopupMessage] = useState('');
+  const [showFilters, setShowFilters] = useState(false); // Only for mobile
 
   useEffect(() => {
     const stored = JSON.parse(localStorage.getItem("wishlist")) || [];
@@ -22,10 +24,7 @@ const Shop = () => {
   useEffect(() => {
     fetch('http://localhost:3001/products')
       .then(res => res.json())
-      .then(data => {
-        console.log("Fetched products:", data);
-        setProducts(data);
-      });
+      .then(data => setProducts(data));
   }, []);
 
   const handleProductClick = (product) => {
@@ -85,11 +84,21 @@ const Shop = () => {
         <div className='container'>
           <div className='row'>
 
-            {/* FILTER COLUMN */}
-            <div className='col-md-3'>
-            <div className='filter-box'>
-              <h3>PRICE</h3>
-              <div className="price-filter">
+            {/* Show Filters Toggle Button (Only on Mobile) */}
+            <div className="col-12 d-md-none mb-3">
+              <button
+                className="toggle-filter-btn"
+                onClick={() => setShowFilters(!showFilters)}
+              >
+                {showFilters ? "🔼 Hide Filters" : "🔽 Show Filters"}
+              </button>
+            </div>
+
+            {/* FILTER PANEL */}
+            <div className={`filter-panel col-md-3 ${showFilters ? 'mobile-visible' : ''}`}>
+              <div className='filter-box'>
+                <h3>PRICE</h3>
+                <div className="price-filter">
                 <div className="range-slider">
                   <input
                     type="range"
@@ -99,17 +108,14 @@ const Shop = () => {
                     value={maxPrice}
                     onChange={(e) => setMaxPrice(Number(e.target.value))}
                   />
-                </div>
-                <div className="price-values">
+                  </div>
                   <span>Up to ${maxPrice}</span>
                 </div>
               </div>
-            </div>
 
-              {/* Dummy Brand, Size, Weight Sections */}
-              <div className='filter-box'><h3>Brand</h3><ul><li><a href='#'>Brand 1(15)</a></li></ul></div>
-              <div className='filter-box'><h3>Size</h3><ul><li><a href='#'>Size 1(15)</a></li></ul></div>
-              <div className='filter-box'><h3>Weight</h3><ul><li><a href='#'>Weight 1(15)</a></li></ul></div>
+              <div className='filter-box'><h3>Brand</h3><ul><li><a href="#">Brand 1(15)</a></li></ul></div>
+              <div className='filter-box'><h3>Size</h3><ul><li><a href="#">Size 1(15)</a></li></ul></div>
+              <div className='filter-box'><h3>Weight</h3><ul><li><a href="#">Weight 1(15)</a></li></ul></div>
             </div>
 
             {/* PRODUCT COLUMN */}
@@ -130,7 +136,7 @@ const Shop = () => {
               <div className='row'>
                 {filteredProducts.map((product) => (
                   <div className='col-md-4 mb-5' key={product.id} onClick={() => handleProductClick(product)}>
-                    <div style={{ cursor: "pointer" }} onClick={() => handleProductClick(product.id)}>
+                    <div style={{ cursor: "pointer" }}>
                       <div className="img-box">
                         <img
                           src={product.image}

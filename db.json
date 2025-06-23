@@ -6,17 +6,19 @@
       "image": "/images/product1.png",
       "price": 96.99,
       "describ": "Machine Design, 24 Carat",
-      "describ1": "Product Code: Product 16",
-      "quantity": 1, 
-      "Vendor":"Chain Bracelet",
+      "describ1": "Product Code: Product 16",
+      "quantity": 1,
+      "Vendor": "Chain Bracelet",
+      "Weight": "10Gm",
+      "Purity": "22K",
+      "Availability": "Stock",
       "imageArray": [
-          { "id": 1, "url": "/images/product1.png" },
-          { "id": 2, "url": "/images/product1-1.png" },
-          { "id": 3, "url": "/images/product1-2.png" },
-          { "id": 4, "url": "/images/product1-3.png" }
-        ],
-        "handle":"Chain Bracelet"
-     
+        { "id": 1, "url": "/images/product1.png" },
+        { "id": 2, "url": "/images/product1-1.png" },
+        { "id": 3, "url": "/images/product1-2.png" },
+        { "id": 4, "url": "/images/product1-3.png" }
+      ],
+      "handle": "Chain Bracelet"
     },
     {
       "id": 2,
@@ -24,16 +26,19 @@
       "image": "/images/product2.png",
       "price": 85.29,
       "describ": "Hand Design, 24 Carat",
-      "describ1": "Product Code: Product 16",
-      "quantity": 1, 
-      "Vendor":"Gold Rings",
+      "describ1": "Product Code: Product 16",
+      "quantity": 1,
+      "Vendor": "Gold Rings",
+      "Weight": "8Gm",
+      "Purity": "24K",
+      "Availability": "Stock",
       "imageArray": [
-          { "id": 1, "url": "/images/product2.png" },
-          { "id": 2, "url": "/images/product2-1.png" },
-          { "id": 3, "url": "/images/product2-2.png" },
-          { "id": 4, "url": "/images/product2-3.png" }
-        ],
-        "handle":"GoldRings"
+        { "id": 1, "url": "/images/product2.png" },
+        { "id": 2, "url": "/images/product2-1.png" },
+        { "id": 3, "url": "/images/product2-2.png" },
+        { "id": 4, "url": "/images/product2-3.png" }
+      ],
+      "handle": "GoldRings"
     },
     {
       "id": 3,
@@ -41,16 +46,19 @@
       "image": "/images/product3.png",
       "price": 76.77,
       "describ": "Machine Design, 24 Carat",
-      "describ1": "Product Code: Product 16",
-      "quantity": 1, 
-      "Vendor":"Gemstone Earrings",
+      "describ1": "Product Code: Product 16",
+      "quantity": 1,
+      "Vendor": "Gemstone Earrings",
+      "Weight": "6Gm",
+      "Purity": "18K",
+      "Availability": "Stock",
       "imageArray": [
-          { "id": 1, "url": "/images/product3.png" },
-          { "id": 2, "url": "/images/product3-1.png" },
-          { "id": 3, "url": "/images/product3-2.png" },
-          { "id": 4, "url": "/images/product3-3.png" }
-        ],
-        "handle":"GemstoneEarrings"
+        { "id": 1, "url": "/images/product3.png" },
+        { "id": 2, "url": "/images/product3-1.png" },
+        { "id": 3, "url": "/images/product3-2.png" },
+        { "id": 4, "url": "/images/product3-3.png" }
+      ],
+      "handle": "GemstoneEarrings"
     },
     {
       "id": 4,
@@ -58,16 +66,19 @@
       "image": "/images/product4.png",
       "price": 67.11,
       "describ": "Hand Wash, 22 Carat",
-      "describ1": "Product Code: Product 16",
-      "quantity": 1, 
-      "Vendor":"Royal Earrings",
+      "describ1": "Product Code: Product 16",
+      "quantity": 1,
+      "Vendor": "Royal Earrings",
+      "Weight": "10Gm",
+      "Purity": "22K",
+      "Availability": "Stock",
       "imageArray": [
-          { "id": 1, "url": "/images/product4.png" },
-          { "id": 2, "url": "/images/product4-1.png" },
-          { "id": 3, "url": "/images/product4-2.png" },
-          { "id": 4, "url": "/images/product4-3.png" }
-        ],
-        "handle":"RoyalEarrings"
+        { "id": 1, "url": "/images/product4.png" },
+        { "id": 2, "url": "/images/product4-1.png" },
+        { "id": 3, "url": "/images/product4-2.png" },
+        { "id": 4, "url": "/images/product4-3.png" }
+      ],
+      "handle": "RoyalEarrings"
     },
     {
       "id": 5,
@@ -75,16 +86,19 @@
       "image": "/images/product5.png",
       "price": 54.99,
       "describ": "Machine Design, 24 Carat",
-      "describ1": "Product Code: Product 16",
-      "quantity": 1, 
-      "Vendor":"Solitaire Ring",
+      "describ1": "Product Code: Product 16",
+      "quantity": 1,
+      "Vendor": "Solitaire Ring",
+      "Weight": "14Gm",
+      "Purity": "22K",
+      "Availability": "Stock",
       "imageArray": [
-          { "id": 1, "url": "/images/product5.png" },
-          { "id": 2, "url": "/images/product5-1.png" },
-          { "id": 3, "url": "/images/product5-2.png" },
-          { "id": 4, "url": "/images/product5-3.png" }
-        ],
-        "handle":"SolitaireRing"
+        { "id": 1, "url": "/images/product5.png" },
+        { "id": 2, "url": "/images/product5-1.png" },
+        { "id": 3, "url": "/images/product5-2.png" },
+        { "id": 4, "url": "/images/product5-3.png" }
+      ],
+      "handle": "SolitaireRing"
     },
     {
       "id": 6,
@@ -92,17 +106,19 @@
       "image": "/images/product6.png",
       "price": 47.32,
       "describ": "Machine Design, 24 Carat",
-      "describ1": "Product Code: Product 16",
-      "quantity": 1, 
-      "Vendor":"Gold Rings",
+      "describ1": "Product Code: Product 16",
+      "quantity": 1,
+      "Vendor": "Gold Rings",
+      "Weight": "12Gm",
+      "Purity": "18K",
+      "Availability": "Stock",
       "imageArray": [
-          { "id": 1, "url": "/images/product6.png" },
-          { "id": 2, "url": "/images/product6-1.png" },
-          { "id": 3, "url": "/images/product6-2.png" },
-          { "id": 4, "url": "/images/product6-3.png" }
-        ],
-        "handle":"GoldRings"
-
+        { "id": 1, "url": "/images/product6.png" },
+        { "id": 2, "url": "/images/product6-1.png" },
+        { "id": 3, "url": "/images/product6-2.png" },
+        { "id": 4, "url": "/images/product6-3.png" }
+      ],
+      "handle": "GoldRings"
     },
     {
       "id": 7,
@@ -110,16 +126,19 @@
       "image": "/images/product7.png",
       "price": 35.32,
       "describ": "Gold Design, 18 KT",
-      "describ1": "Product Code: Product 16",
-      "quantity": 1, 
-      "Vendor":"Floral Ring",
+      "describ1": "Product Code: Product 16",
+      "quantity": 1,
+      "Vendor": "Floral Ring",
+      "Weight": "12Gm",
+      "Purity": "22K",
+      "Availability": "Stock",
       "imageArray": [
-          { "id": 1, "url": "/images/product7.png" },
-          { "id": 2, "url": "/images/product7-1.png" },
-          { "id": 3, "url": "/images/product7-2.png" },
-          { "id": 4, "url": "/images/product7-3.png" }
-        ],
-        "handle":"FloralRing"
+        { "id": 1, "url": "/images/product7.png" },
+        { "id": 2, "url": "/images/product7-1.png" },
+        { "id": 3, "url": "/images/product7-2.png" },
+        { "id": 4, "url": "/images/product7-3.png" }
+      ],
+      "handle": "FloralRing"
     },
     {
       "id": 8,
@@ -127,16 +146,19 @@
       "image": "/images/product8.png",
       "price": 21.78,
       "describ": "Gold Design, 18 KT",
-      "describ1": "Product Code: Product 16",
-      "quantity": 1, 
-      "Vendor":"Gold Pendant",
+      "describ1": "Product Code: Product 16",
+      "quantity": 1,
+      "Vendor": "Gold Pendant",
+      "Weight": "8Gm",
+      "Purity": "22K",
+      "Availability": "Stock",
       "imageArray": [
-          { "id": 1, "url": "/images/product8.png" },
-          { "id": 2, "url": "/images/product8-1.png" },
-          { "id": 3, "url": "/images/product8-2.png" },
-          { "id": 4, "url": "/images/product8-3.png" }
-        ],
-        "handle":"GoldPendant"
+        { "id": 1, "url": "/images/product8.png" },
+        { "id": 2, "url": "/images/product8-1.png" },
+        { "id": 3, "url": "/images/product8-2.png" },
+        { "id": 4, "url": "/images/product8-3.png" }
+      ],
+      "handle": "GoldPendant"
     },
     {
       "id": 9,
@@ -144,16 +166,19 @@
       "image": "/images/product9.png",
       "price": 16.34,
       "describ": "Gold Design, 18 KT",
-      "describ1": "Product Code: Product 16",
-      "quantity": 1, 
-      "Vendor":"Gold Ring",
+      "describ1": "Product Code: Product 16",
+      "quantity": 1,
+      "Vendor": "Gold Ring",
+      "Weight": "18Gm",
+      "Purity": "24K",
+      "Availability": "Stock",
       "imageArray": [
-          { "id": 1, "url": "/images/product9.png" },
-          { "id": 2, "url": "/images/product9-1.png" },
-          { "id": 3, "url": "/images/product9-2.png" },
-          { "id": 4, "url": "/images/product9-3.png" }
-        ],
-        "handle":"PearRing"
+        { "id": 1, "url": "/images/product9.png" },
+        { "id": 2, "url": "/images/product9-1.png" },
+        { "id": 3, "url": "/images/product9-2.png" },
+        { "id": 4, "url": "/images/product9-3.png" }
+      ],
+      "handle": "PearRing"
     },
     {
       "id": 10,
@@ -161,16 +186,19 @@
       "image": "/images/product10.png",
       "price": 78.67,
       "describ": "Gold Design, 18 KT",
-      "describ1": "Product Code: Product 16",
-      "quantity": 1, 
-      "Vendor":"Gemstone Bracelet",
+      "describ1": "Product Code: Product 16",
+      "quantity": 1,
+      "Vendor": "Gemstone Bracelet",
+      "Weight": "20Gm",
+      "Purity": "24K",
+      "Availability": "Stock",
       "imageArray": [
-          { "id": 1, "url": "/images/product10.png" },
-          { "id": 2, "url": "/images/product10-1.png" },
-          { "id": 3, "url": "/images/product10-2.png" },
-          { "id": 4, "url": "/images/product10-3.png" }
-        ],
-        "handle":"GemstoneBracelet"
+        { "id": 1, "url": "/images/product10.png" },
+        { "id": 2, "url": "/images/product10-1.png" },
+        { "id": 3, "url": "/images/product10-2.png" },
+        { "id": 4, "url": "/images/product10-3.png" }
+      ],
+      "handle": "GemstoneBracelet"
     },
     {
       "id": 11,
@@ -178,16 +206,19 @@
       "image": "/images/product11.png",
       "price": 56.34,
       "describ": "Gold Design, 18 KT",
-      "describ1": "Product Code: Product 16",
-      "quantity": 1, 
-      "Vendor":"Diamond Pendant",
+      "describ1": "Product Code: Product 16",
+      "quantity": 1,
+      "Vendor": "Diamond Pendant",
+      "Weight": "14Gm",
+      "Purity": "22K",
+      "Availability": "Stock",
       "imageArray": [
-          { "id": 1, "url": "/images/product11.png" },
-          { "id": 2, "url": "/images/product11-1.png" },
-          { "id": 3, "url": "/images/product11-2.png" },
-          { "id": 4, "url": "/images/product11-3.png" }
-        ],
-        "handle":"DiamondPendant"
+        { "id": 1, "url": "/images/product11.png" },
+        { "id": 2, "url": "/images/product11-1.png" },
+        { "id": 3, "url": "/images/product11-2.png" },
+        { "id": 4, "url": "/images/product11-3.png" }
+      ],
+      "handle": "DiamondPendant"
     },
     {
       "id": 12,
@@ -195,17 +226,19 @@
       "image": "/images/product12.png",
       "price": 78.67,
       "describ": "Gold Design, 18 KT",
-      "describ1": "Product Code: Product 16",
-      "quantity": 1, 
-      "Vendor":"Gold Bracelet",
+      "describ1": "Product Code: Product 16",
+      "quantity": 1,
+      "Vendor": "Gold Bracelet",
+      "Weight": "25Gm",
+      "Purity": "24K",
+      "Availability": "Stock",
       "imageArray": [
-          { "id": 1, "url": "/images/product12.png" },
-          { "id": 2, "url": "/images/product12-1.png" },
-          { "id": 3, "url": "/images/product12-2.png" },
-          { "id": 4, "url": "/images/product12-3.png" }
-        ],
-        "handle":"ChainBracelet"
+        { "id": 1, "url": "/images/product12.png" },
+        { "id": 2, "url": "/images/product12-1.png" },
+        { "id": 3, "url": "/images/product12-2.png" },
+        { "id": 4, "url": "/images/product12-3.png" }
+      ],
+      "handle": "ChainBracelet"
     }
-
   ]
 }
