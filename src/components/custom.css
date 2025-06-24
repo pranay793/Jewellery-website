@@ -1157,6 +1157,11 @@ footer p a{
 .mob-gap{
   padding-left: 8px!important;
 }
+.product-slide .slick-dots li{
+   height: 70px;
+    margin: 0 5px;
+    width: 70px;
+}
 
 }
 
