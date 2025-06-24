@@ -1280,7 +1280,6 @@ footer p a{
 }
 
 .table-wrapper {
-  background: #f9fafb;
   padding: 20px;
   border-radius: 12px;
   margin-bottom: 24px;
@@ -1292,6 +1291,9 @@ footer p a{
   font-weight: 600;
   color: #374151;
   margin-bottom: 12px;
+}
+.product-table .text-right{
+  text-align: right !important;
 }
 
 .table-scroll {

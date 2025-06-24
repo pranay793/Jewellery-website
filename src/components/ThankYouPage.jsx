@@ -40,7 +40,6 @@ const ThankYouPage = () => {
         </p>
 
         <div className="table-wrapper">
-          <h3 className="table-title">Products:</h3>
           <div className="table-scroll">
             <table className="product-table">
               <thead>

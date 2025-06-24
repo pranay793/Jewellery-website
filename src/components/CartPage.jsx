@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import { CartContext } from '../context/CartContext';
 import { useNavigate } from 'react-router-dom';
 import './CartPage.css';
+import './custom.css';
 
 const CartPage = () => {
   const { cartItems, setCartItems } = useContext(CartContext);
@@ -41,6 +42,7 @@ const CartPage = () => {
         <div className="row">
           {/* Cart Table */}
           <div className="col-md-8">
+          <div class="table-scroll">
             <table className="table cart-table">
               <thead className="table-light">
                 <tr>
@@ -99,6 +101,7 @@ const CartPage = () => {
                 ))}
               </tbody>
             </table>
+            </div>
           </div>
 
           {/* Cart Summary */}
