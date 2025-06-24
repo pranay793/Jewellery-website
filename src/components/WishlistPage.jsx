@@ -25,7 +25,7 @@ const WishlistPage = () => {
             <div key={product.id} className="wishlist-item">
               <img src={product.image} alt={product.name} />
               <h4>{product.name}</h4>
-              <p>{product.describ}</p>
+              <p>{product.productdescrib}</p>
               <p>{product.price}</p>
               <button onClick={() => removeFromWishlist(product.id)}>Remove</button>
             </div>

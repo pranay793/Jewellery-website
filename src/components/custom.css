@@ -596,7 +596,6 @@ footer p a{
 
 .price-filter {
   padding: 20px;
-  max-width: 300px;
 }
 
 .price-filter h4 {
@@ -1234,6 +1233,128 @@ footer p a{
 
 
 
+.thank-you-page {
+  background-color: #f3f4f6;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.thank-you-container {
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+  max-width: 800px;
+  width: 100%;
+  padding: 30px;
+  text-align: center;
+}
+
+.success-icon {
+  width: 60px;
+  margin-bottom: 16px;
+}
+
+.thank-you-heading {
+  font-size: 28px;
+  font-weight: bold;
+  color: #1f2937;
+  margin-bottom: 8px;
+}
+
+.thank-you-text {
+  color: #6b7280;
+  margin-bottom: 20px;
+}
+
+.order-id {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.highlighted {
+  color: #FCCA01;
+  font-weight: 600;
+}
+
+.table-wrapper {
+  background: #f9fafb;
+  padding: 20px;
+  border-radius: 12px;
+  margin-bottom: 24px;
+  text-align: left;
+}
+
+.table-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #374151;
+  margin-bottom: 12px;
+}
+
+.table-scroll {
+  overflow-x: auto;
+}
+
+.product-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+.product-table th,
+.product-table td {
+  border: 1px solid #e5e7eb;
+  padding: 10px;
+  text-align: center;
+}
+
+.product-table th {
+  background-color: #f3f4f6;
+  font-weight: 600;
+}
+
+.product-image {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.total-row {
+  background-color: #f3f4f6;
+  font-weight: 600;
+}
+
+.delivery-info {
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.delivery-date {
+  background: #efefef;
+  color: #000000;
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-weight: 600;
+}
+
+.home-button {
+  display: inline-block;
+  background-color: #FCCA01;
+  color: white;
+  padding: 10px 24px;
+  border-radius: 9999px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.home-button:hover {
+  background-color: #000;
+}
 
 
 
