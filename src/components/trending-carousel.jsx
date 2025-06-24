@@ -77,7 +77,7 @@ const FourProductCarousel = () => {
   };
 
   useEffect(() => {
-    fetch('http://localhost:3001/products')
+    fetch('https://jewelleryapi-oj08.onrender.com/products')
       .then(res => res.json())
       .then(data => {
         console.log("Fetched products:", data);

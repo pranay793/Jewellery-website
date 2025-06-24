@@ -88,10 +88,10 @@ useEffect(() => {
             </div>
 
             <nav className={`nav-links ${mobileMenuOpen ? 'open' : ''}`}>
-              <a href="/">Home</a>
-              <a href="#">About us</a>
-              <a href="/Shop">Product</a>
-              <a href="#">Contact us</a>
+              <Link to="/">Home</Link>
+              <Link to="#">About us</Link>
+              <Link to="/Shop">Product</Link>
+              <Link to="#">Contact us</Link>
             </nav>
           </div>
           <div className='col-md-3 col-5 order-lg-2 order-1'>

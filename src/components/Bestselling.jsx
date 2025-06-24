@@ -22,7 +22,7 @@ const Bestselling = () => {
   }, []);
 
   useEffect(() => {
-    fetch('http://localhost:3001/products')
+    fetch('https://jewelleryapi-oj08.onrender.com/products')
       .then(res => res.json())
       .then(data => {
         // Convert product.id to Number for accurate comparison
