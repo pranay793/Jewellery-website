@@ -14,7 +14,13 @@ const Shop = () => {
   const [wishlist, setWishlist] = useState([]);
   const [productsData, setProducts] = useState([]);
   const [popupMessage, setPopupMessage] = useState('');
-  const [showFilters, setShowFilters] = useState(false); // Only for mobile
+  const [showFilters, setShowFilters] = useState(false); // Mobile toggle
+  const [selectedCategory, setSelectedCategory] = useState('');
+
+  const [availabilityFilter, setAvailabilityFilter] = useState({
+    inStock: false,
+    outOfStock: false
+  });
 
   useEffect(() => {
     const stored = JSON.parse(localStorage.getItem("wishlist")) || [];
@@ -30,12 +36,6 @@ const Shop = () => {
   const handleProductClick = (product) => {
     navigate(`/ProductDetails/${product.id}`, { state: { product } });
   };
-
-  const filteredProducts = productsData.filter(
-    (product) =>
-      product.price <= maxPrice &&
-      product.name.toLowerCase().includes(searchTerm.toLowerCase())
-  );
 
   const handleWishlistClick = (e, product) => {
     e.stopPropagation();
@@ -67,6 +67,27 @@ const Shop = () => {
     setTimeout(() => setPopupMessage(''), 2000);
   };
 
+  const handleAvailabilityChange = (type) => {
+    setAvailabilityFilter(prev => ({ ...prev, [type]: !prev[type] }));
+  };
+
+  const productTypes = ["Bracelet", "Earrings", "Rings", "Pendant"];
+
+  const filteredProducts = productsData.filter(product => {
+    const matchesPrice = product.price <= maxPrice;
+    const matchesSearch = product.name.toLowerCase().includes(searchTerm.toLowerCase());
+
+    const matchesAvailability =
+      (!availabilityFilter.inStock && !availabilityFilter.outOfStock) ||
+      (availabilityFilter.inStock && product.stock > 0) ||
+      (availabilityFilter.outOfStock && product.stock === 0);
+
+    const matchesProductType =
+      !selectedCategory || product.category === selectedCategory;
+
+    return matchesPrice && matchesSearch && matchesAvailability && matchesProductType;
+  });
+
   return (
     <>
       <section className='inner-banner'>
@@ -84,22 +105,14 @@ const Shop = () => {
         <div className='container'>
           <div className='row'>
 
-            {/* Show Filters Toggle Button (Only on Mobile) */}
+            {/* Mobile Filter Toggle */}
             <div className="col-12 d-md-none mb-3">
-              <button
-                className="toggle-filter-btn"
-                onClick={() => setShowFilters(!showFilters)}
-              >
+              <button className="toggle-filter-btn" onClick={() => setShowFilters(!showFilters)}>
                 {showFilters ? (
-  <>
-    Hide Left Panel <i className="fa-solid fa-angle-up"></i>
-  </>
-) : (
-  <>
-    Show Left Panel <i className="fa-solid fa-angle-down"></i>
-  </>
-)}
-
+                  <>Hide Left Panel <i className="fa-solid fa-angle-up"></i></>
+                ) : (
+                  <>Show Left Panel <i className="fa-solid fa-angle-down"></i></>
+                )}
               </button>
             </div>
 
@@ -108,26 +121,80 @@ const Shop = () => {
               <div className='filter-box'>
                 <h3>PRICE</h3>
                 <div className="price-filter">
-                <div className="range-slider">
-                  <input
-                    type="range"
-                    min="0"
-                    max="100"
-                    step="1"
-                    value={maxPrice}
-                    onChange={(e) => setMaxPrice(Number(e.target.value))}
-                  />
+                  <div className="range-slider">
+                    <input
+                      type="range"
+                      min="0"
+                      max="100"
+                      step="1"
+                      value={maxPrice}
+                      onChange={(e) => setMaxPrice(Number(e.target.value))}
+                    />
                   </div>
                   <span>Up to ${maxPrice}</span>
                 </div>
               </div>
 
-              <div className='filter-box'><h3>Brand</h3><ul><li><a href="#">Brand 1(15)</a></li></ul></div>
-              <div className='filter-box'><h3>Size</h3><ul><li><a href="#">Size 1(15)</a></li></ul></div>
-              <div className='filter-box'><h3>Weight</h3><ul><li><a href="#">Weight 1(15)</a></li></ul></div>
+              <div className='filter-box'>
+                <h3>Availability</h3>
+                <ul>
+                  <li>
+                    <label>
+                      <input
+                        type="checkbox"
+                        checked={availabilityFilter.inStock}
+                        onChange={() => handleAvailabilityChange("inStock")}
+                      /> In Stock
+                    </label>
+                  </li>
+                  <li>
+                    <label>
+                      <input
+                        type="checkbox"
+                        checked={availabilityFilter.outOfStock}
+                        onChange={() => handleAvailabilityChange("outOfStock")}
+                      /> Out of Stock
+                    </label>
+                  </li>
+                </ul>
+              </div>
+
+              <div className='filter-box'>
+                <h3>Product type</h3>
+                <ul>
+                  {productTypes.map(type => (
+                    <li key={type}>
+                      <label
+                        style={{ cursor: 'pointer', color: selectedCategory === type ? '#d19c97' : '#000' }}
+                        onClick={() => setSelectedCategory(selectedCategory === type ? '' : type)}
+                      >
+                        <input
+                          type="checkbox"
+                          checked={selectedCategory === type}
+                          readOnly
+                        /> {type}
+                      </label>
+                    </li>
+                  ))}
+                </ul>
+                {selectedCategory && (
+                  <button
+                    onClick={() => setSelectedCategory('')}
+                    style={{
+                      background: '#eee',
+                      border: 'none',
+                      padding: '5px 10px',
+                      marginTop: '10px',
+                      cursor: 'pointer'
+                    }}
+                  >
+                    Clear Product Type Filter
+                  </button>
+                )}
+              </div>
             </div>
 
-            {/* PRODUCT COLUMN */}
+            {/* PRODUCT LIST */}
             <div className='col-md-9'>
               <div className='sort-by'>
                 <p>Sort By</p>
