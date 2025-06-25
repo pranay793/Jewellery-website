@@ -14,13 +14,7 @@ const Shop = () => {
   const [wishlist, setWishlist] = useState([]);
   const [productsData, setProducts] = useState([]);
   const [popupMessage, setPopupMessage] = useState('');
-  const [showFilters, setShowFilters] = useState(false); // Mobile toggle
-  const [selectedCategory, setSelectedCategory] = useState('');
-
-  const [availabilityFilter, setAvailabilityFilter] = useState({
-    inStock: false,
-    outOfStock: false
-  });
+  const [showFilters, setShowFilters] = useState(false);
 
   useEffect(() => {
     const stored = JSON.parse(localStorage.getItem("wishlist")) || [];
@@ -67,26 +61,11 @@ const Shop = () => {
     setTimeout(() => setPopupMessage(''), 2000);
   };
 
-  const handleAvailabilityChange = (type) => {
-    setAvailabilityFilter(prev => ({ ...prev, [type]: !prev[type] }));
-  };
-
-  const productTypes = ["Bracelet", "Earrings", "Rings", "Pendant"];
-
-  const filteredProducts = productsData.filter(product => {
-    const matchesPrice = product.price <= maxPrice;
-    const matchesSearch = product.name.toLowerCase().includes(searchTerm.toLowerCase());
-
-    const matchesAvailability =
-      (!availabilityFilter.inStock && !availabilityFilter.outOfStock) ||
-      (availabilityFilter.inStock && product.stock > 0) ||
-      (availabilityFilter.outOfStock && product.stock === 0);
-
-    const matchesProductType =
-      !selectedCategory || product.category === selectedCategory;
-
-    return matchesPrice && matchesSearch && matchesAvailability && matchesProductType;
-  });
+  const filteredProducts = productsData.filter(
+    (product) =>
+      product.price <= maxPrice &&
+      product.name.toLowerCase().includes(searchTerm.toLowerCase())
+  );
 
   return (
     <>
@@ -105,7 +84,7 @@ const Shop = () => {
         <div className='container'>
           <div className='row'>
 
-            {/* Mobile Filter Toggle */}
+            {/* Show Filters Toggle Button (Mobile) */}
             <div className="col-12 d-md-none mb-3">
               <button className="toggle-filter-btn" onClick={() => setShowFilters(!showFilters)}>
                 {showFilters ? (
@@ -135,66 +114,24 @@ const Shop = () => {
                 </div>
               </div>
 
+              {/* Placeholder Filters */}
               <div className='filter-box'>
-                <h3>Availability</h3>
-                <ul>
-                  <li>
-                    <label>
-                      <input
-                        type="checkbox"
-                        checked={availabilityFilter.inStock}
-                        onChange={() => handleAvailabilityChange("inStock")}
-                      /> In Stock
-                    </label>
-                  </li>
-                  <li>
-                    <label>
-                      <input
-                        type="checkbox"
-                        checked={availabilityFilter.outOfStock}
-                        onChange={() => handleAvailabilityChange("outOfStock")}
-                      /> Out of Stock
-                    </label>
-                  </li>
-                </ul>
+                <h3>Brand</h3>
+                <ul><li><a href="#">Brand 1 (15)</a></li></ul>
               </div>
 
               <div className='filter-box'>
-                <h3>Product type</h3>
-                <ul>
-                  {productTypes.map(type => (
-                    <li key={type}>
-                      <label
-                        style={{ cursor: 'pointer', color: selectedCategory === type ? '#d19c97' : '#000' }}
-                        onClick={() => setSelectedCategory(selectedCategory === type ? '' : type)}
-                      >
-                        <input
-                          type="checkbox"
-                          checked={selectedCategory === type}
-                          readOnly
-                        /> {type}
-                      </label>
-                    </li>
-                  ))}
-                </ul>
-                {selectedCategory && (
-                  <button
-                    onClick={() => setSelectedCategory('')}
-                    style={{
-                      background: '#eee',
-                      border: 'none',
-                      padding: '5px 10px',
-                      marginTop: '10px',
-                      cursor: 'pointer'
-                    }}
-                  >
-                    Clear Product Type Filter
-                  </button>
-                )}
+                <h3>Size</h3>
+                <ul><li><a href="#">Size 1 (15)</a></li></ul>
+              </div>
+
+              <div className='filter-box'>
+                <h3>Weight</h3>
+                <ul><li><a href="#">Weight 1 (15)</a></li></ul>
               </div>
             </div>
 
-            {/* PRODUCT LIST */}
+            {/* PRODUCT COLUMN */}
             <div className='col-md-9'>
               <div className='sort-by'>
                 <p>Sort By</p>
