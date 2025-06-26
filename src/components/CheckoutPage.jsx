@@ -66,7 +66,7 @@ const CheckoutPage = () => {
           <h2>Checkout</h2>
           <div className="checkout-wrapper">
             {/* Billing Form */}
-            <form className="checkout-form" onSubmit={handleSubmit}>
+            <form className="checkout-form order-lg-1 order-2" onSubmit={handleSubmit}>
               <h3>Billing Information</h3>
 
               <div className="form-group full-width">
@@ -149,7 +149,7 @@ const CheckoutPage = () => {
             </form>
 
             {/* Order Summary */}
-            <div className="order-summary">
+            <div className="order-summary order-lg-2 order-1">
               <h3>Order Summary</h3>
               {cartItems.map(item => (
                 <div key={item.id} className="summary-product">

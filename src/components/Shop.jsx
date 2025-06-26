@@ -115,19 +115,24 @@ const Shop = () => {
               </div>
 
               {/* Placeholder Filters */}
+              
+
               <div className='filter-box'>
-                <h3>Brand</h3>
-                <ul><li><a href="#">Brand 1 (15)</a></li></ul>
+                <h3>Avaliity</h3>
+                <ul>
+                  <li><input type="checkbox"/> In stock</li>
+                  <li><input type="checkbox"/> Out Of Stock</li>
+                </ul>
               </div>
 
               <div className='filter-box'>
-                <h3>Size</h3>
-                <ul><li><a href="#">Size 1 (15)</a></li></ul>
-              </div>
-
-              <div className='filter-box'>
-                <h3>Weight</h3>
-                <ul><li><a href="#">Weight 1 (15)</a></li></ul>
+              <h3>Product Type</h3>
+                <ul>
+                <li><input type="checkbox"/> Bracelet</li>
+                <li><input type="checkbox"/> Rings</li>
+                <li><input type="checkbox"/> Earrings</li>
+                <li><input type="checkbox"/> Pendant</li>
+                </ul>
               </div>
             </div>
 
