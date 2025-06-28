@@ -16,6 +16,10 @@ const Shop = () => {
   const [popupMessage, setPopupMessage] = useState('');
   const [showFilters, setShowFilters] = useState(false);
 
+  const [categories, setCategories] = useState([]);
+  const [selectedCategories, setSelectedCategories] = useState([]);
+  const [selectedAvailability, setSelectedAvailability] = useState([]);
+
   useEffect(() => {
     const stored = JSON.parse(localStorage.getItem("wishlist")) || [];
     setWishlist(stored);
@@ -24,7 +28,14 @@ const Shop = () => {
   useEffect(() => {
     fetch('https://jewelleryapi-oj08.onrender.com/products')
       .then(res => res.json())
-      .then(data => setProducts(data));
+      .then(data => {
+        setProducts(data);
+        const normalized = data.map(p => p.category?.trim().toLowerCase());
+        const uniqueSet = Array.from(new Set(normalized)).map(cat =>
+          data.find(p => p.category?.trim().toLowerCase() === cat)?.category
+        );
+        setCategories(uniqueSet);
+      });
   }, []);
 
   const handleProductClick = (product) => {
@@ -34,7 +45,6 @@ const Shop = () => {
   const handleWishlistClick = (e, product) => {
     e.stopPropagation();
     const isAlreadyAdded = wishlist.find(item => item.id === product.id);
-
     if (!isAlreadyAdded) {
       const updated = [...wishlist, product];
       localStorage.setItem("wishlist", JSON.stringify(updated));
@@ -42,14 +52,12 @@ const Shop = () => {
     } else {
       setPopupMessage("This product is already in your wishlist!");
     }
-
     setTimeout(() => setPopupMessage(''), 2000);
   };
 
   const handleAddToCart = (e, product) => {
     e.stopPropagation();
     const isAlreadyInCart = cartItems.find(item => item.id === product.id);
-
     if (isAlreadyInCart) {
       setPopupMessage("This product is already in your cart!");
     } else {
@@ -57,15 +65,30 @@ const Shop = () => {
       setCartItems(updated);
       localStorage.setItem("cart", JSON.stringify(updated));
     }
-
     setTimeout(() => setPopupMessage(''), 2000);
   };
 
-  const filteredProducts = productsData.filter(
-    (product) =>
-      product.price <= maxPrice &&
-      product.name.toLowerCase().includes(searchTerm.toLowerCase())
-  );
+  const handleCheckboxChange = (e, value, type) => {
+    const checked = e.target.checked;
+    if (type === "category") {
+      setSelectedCategories(prev =>
+        checked ? [...prev, value] : prev.filter(item => item !== value)
+      );
+    } else if (type === "availability") {
+      setSelectedAvailability(prev =>
+        checked ? [...prev, value] : prev.filter(item => item !== value)
+      );
+    }
+  };
+
+  const filteredProducts = productsData.filter(product => {
+    const matchesPrice = product.price <= maxPrice;
+    const matchesSearch = product.name.toLowerCase().includes(searchTerm.toLowerCase());
+    const matchesCategory = selectedCategories.length === 0 || selectedCategories.includes(product.category);
+    const availabilityStatus = product.Availability === "Stock" ? "In Stock" : "Out of Stock";
+    const matchesAvailability = selectedAvailability.length === 0 || selectedAvailability.includes(availabilityStatus);
+    return matchesPrice && matchesSearch && matchesCategory && matchesAvailability;
+  });
 
   return (
     <>
@@ -84,18 +107,16 @@ const Shop = () => {
         <div className='container'>
           <div className='row'>
 
-            {/* Show Filters Toggle Button (Mobile) */}
             <div className="col-12 d-md-none mb-3">
               <button className="toggle-filter-btn" onClick={() => setShowFilters(!showFilters)}>
                 {showFilters ? (
-                  <>Hide Left Panel <i className="fa-solid fa-angle-up"></i></>
+                  <>Hide Filters <i className="fa-solid fa-angle-up"></i></>
                 ) : (
-                  <>Show Left Panel <i className="fa-solid fa-angle-down"></i></>
+                  <>Show Filters <i className="fa-solid fa-angle-down"></i></>
                 )}
               </button>
             </div>
 
-            {/* FILTER PANEL */}
             <div className={`filter-panel col-md-3 ${showFilters ? 'mobile-visible' : ''}`}>
               <div className='filter-box'>
                 <h3>PRICE</h3>
@@ -114,29 +135,41 @@ const Shop = () => {
                 </div>
               </div>
 
-              {/* Placeholder Filters */}
-              
-
               <div className='filter-box'>
-                <h3>Avaliity</h3>
+                <h3>Availability</h3>
                 <ul>
-                  <li><input type="checkbox"/> In stock</li>
-                  <li><input type="checkbox"/> Out Of Stock</li>
+                  {["In Stock", "Out of Stock"].map(item => (
+                    <li key={item}>
+                      <label>
+                        <input
+                          type="checkbox"
+                          checked={selectedAvailability.includes(item)}
+                          onChange={(e) => handleCheckboxChange(e, item, 'availability')}
+                        /> {item}
+                      </label>
+                    </li>
+                  ))}
                 </ul>
               </div>
 
               <div className='filter-box'>
-              <h3>Product Type</h3>
+                <h3>Product Type</h3>
                 <ul>
-                <li><input type="checkbox"/> Bracelet</li>
-                <li><input type="checkbox"/> Rings</li>
-                <li><input type="checkbox"/> Earrings</li>
-                <li><input type="checkbox"/> Pendant</li>
+                  {categories.map(item => (
+                    <li key={item}>
+                      <label>
+                        <input
+                          type="checkbox"
+                          checked={selectedCategories.includes(item)}
+                          onChange={(e) => handleCheckboxChange(e, item, 'category')}
+                        /> {item}
+                      </label>
+                    </li>
+                  ))}
                 </ul>
               </div>
             </div>
 
-            {/* PRODUCT COLUMN */}
             <div className='col-md-9'>
               <div className='sort-by'>
                 <p>Sort By</p>
