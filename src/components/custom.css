@@ -1365,3 +1365,44 @@ footer p a{
 
 
 
+@media screen and (min-width: 2560px) {
+  body {
+    font-size: 1.25rem;
+  }
+
+  .slide-content h2 {
+    font-size: 6rem;
+    line-height: 6.5rem;
+  }
+
+  .heading-con h2,
+  .why-choose h2 {
+    font-size: 72px;
+  }
+
+  .trend-box h2 {
+    font-size: 100px;
+    line-height: 100px;
+  }
+
+  .container,
+  .middle-sec,
+  .review-area,
+  .thank-box {
+    max-width: 1920px;
+    margin: 0 auto;
+  }
+
+  .carousel-item img {
+    padding: 5px 100px;
+  }
+
+  .Product-Details h2,
+  .Product-Details h3 {
+    font-size: 3.5rem;
+  }
+
+  .Product-Details p {
+    font-size: 1.5rem;
+  }
+}

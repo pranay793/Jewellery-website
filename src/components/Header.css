@@ -1,93 +1,108 @@
-/* src/components/Header.css */
+/* Base header styles */
 .header {
-    padding: 20px 0;
-    position: relative;
+  padding: 20px 0;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1600px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* Logo */
+.logo img {
+  width: clamp(120px, 11vw, 240px); /* scales nicely on all screens */
+}
+
+/* Menu icon (hamburger) */
+.menu-icon {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+/* Desktop navigation */
+.nav-links {
+  display: flex;
+  gap: clamp(16px, 2vw, 40px);
+  justify-content: center;
+  flex: 1;
+}
+
+.nav-links a {
+  color: #000;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: clamp(14px, 1vw, 18px);
+  padding-right: clamp(20px, 2vw, 50px);
+}
+.nav-links a:last-child {
+  padding-right: 0;
+}
+
+.nav-links a:hover {
+  text-decoration: underline;
+}
+
+/* Header icons (search, cart, etc.) */
+.header-icons {
+  display: flex;
+  align-items: center;
+  gap: clamp(10px, 1vw, 20px);
+  justify-content: flex-end;
+}
+
+.search-box {
+  padding: 5px;
+  font-size: 1rem;
+}
+
+/* ===== Responsive: Tablets and below (<=768px) ===== */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
   }
-  
-  .logo img {
-    width: 50%;
-  }
-  
-  /* Hide menu icon on desktop */
+
   .menu-icon {
-    display: none;
-    font-size: 23px;
+    display: block;
     padding-top: 10px;
-    cursor: pointer;
   }
-  
-  /* Desktop nav */
+
   .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: #111827;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    padding: 10px 20px;
+    z-index: 10;
+  }
+
+  .nav-links.open {
     display: flex;
-    gap: 20px;
-    justify-content: center;
   }
-  
-  .nav-links a {
-    color: #000;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-size: 16px;
-    padding-right: 50px;
-  }
-  .nav-links a:last-child {
-   padding-right: 0;
-  }
-  
-  .nav-links a:hover {
-    text-decoration: underline;
-  }
-  
+
   .header-icons {
-    display: flex;
-    align-items: center;
-    gap: 10px;
+    width: 100%;
     justify-content: flex-end;
+    margin-top: 10px;
   }
-  
+
   .search-box {
-    padding: 5px;
+    width: 100%;
+    margin-right: 10px;
   }
-  
-  /* ===== Responsive Styles ===== */
-  @media (max-width: 768px) {
-    .menu-icon {
-      display: block;
-    }
-  
-    .nav-links {
-      display: none;
-      flex-direction: column;
-      width: 100%;
-      background-color: #111827;
-      position: absolute;
-      top: 60px;
-      left: 0;
-      padding: 10px 20px;
-      z-index: 10;
-    }
-  
-    .nav-links.open {
-      display: flex;
-    }
-  
-    .header-icons {
-      width: 100%;
-      justify-content: flex-end;
-      margin-top: 10px;
-    }
-  
-    .search-box {
-      width: 100%;
-      margin-right: 10px;
-    }
-  
-    .header {
-      align-items: flex-start;
-    }
+
+  .nav-links {
+    display: none !important;
   }
-  
-  /* Slide-in menu base */
+}
+
+/* ===== Mobile Slide-in Menu ===== */
 .mobile-menu {
   position: fixed;
   top: 0;
@@ -103,12 +118,10 @@
   padding: 20px;
 }
 
-/* When menu is open */
 .mobile-menu.open {
   right: 0;
 }
 
-/* Close button */
 .close-btn {
   background: none;
   border: none;
@@ -118,7 +131,6 @@
   cursor: pointer;
 }
 
-/* Nav links inside mobile menu */
 .mobile-nav {
   display: flex;
   flex-direction: column;
@@ -130,15 +142,30 @@
   text-decoration: none;
   font-size: 1.25rem;
   padding: 10px 0;
-  border-bottom: 1px solid rgba(255,255,255,0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   transition: color 0.2s;
 }
 
 .mobile-nav a:hover {
-  color: #ff69b4; /* optional: pink on hover */
+  color: #ff69b4;
 }
-@media (max-width: 768px) {
-  .nav-links {
-    display: none !important;
+
+/* ===== 4K Ultra-Wide Support ===== */
+@media (min-width: 1920px) {
+  .header {
+    max-width: 2000px;
+    padding: 40px 60px;
+  }
+
+  .nav-links a {
+    font-size: 20px;
+  }
+
+  .logo img {
+    width: 200px;
+  }
+
+  .header-icons {
+    gap: 30px;
   }
 }
