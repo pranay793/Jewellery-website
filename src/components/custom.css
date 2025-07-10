@@ -1406,3 +1406,7 @@ footer p a{
     font-size: 1.5rem;
   }
 }
+
+.product-slide .slick-slide img {
+  display: inline-block;
+}
